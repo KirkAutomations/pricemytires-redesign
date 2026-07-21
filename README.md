@@ -2,11 +2,14 @@
 
 Production-quality static one-page redesign concept. No build step required.
 
-Private review deployment: <https://kirkautomations.github.io/pricemytires-redesign/>
+Private review deployments:
+- Version 1: <https://kirkautomations.github.io/pricemytires-redesign/>
+- Version 2: <https://kirkautomations.github.io/pricemytires-redesign/v2.html>
 
 ## Route inventory
 
-- `/` (`index.html`): full one-page experience
+- `/` (`index.html`): Version 1 full one-page experience
+- `/v2.html`: Version 2 porcelain, cobalt, and coral app-style redesign
 - `#quote`: interactive SMS quote-request builder and request receipt
 - `#promise`: three-step request and written-quote model
 - `#inventory`: handoff to the existing TireConnect-backed catalog
