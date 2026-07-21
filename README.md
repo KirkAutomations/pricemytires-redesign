@@ -5,11 +5,13 @@ Production-quality static one-page redesign concept. No build step required.
 Private review deployments:
 - Version 1: <https://kirkautomations.github.io/pricemytires-redesign/>
 - Version 2: <https://kirkautomations.github.io/pricemytires-redesign/v2.html>
+- Version 3: <https://kirkautomations.github.io/pricemytires-redesign/v3.html>
 
 ## Route inventory
 
 - `/` (`index.html`): Version 1 full one-page experience
 - `/v2.html`: Version 2 porcelain, cobalt, and coral app-style redesign
+- `/v3.html`: Version 3 Detroit sign-shop, transit-board, and carbon-copy service-order design
 - `#quote`: interactive SMS quote-request builder and request receipt
 - `#promise`: three-step request and written-quote model
 - `#inventory`: handoff to the existing TireConnect-backed catalog
