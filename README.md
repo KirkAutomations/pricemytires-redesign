@@ -34,7 +34,7 @@ Private review deployments:
 
 The quote builder creates a client-side request ID and opens an SMS draft to the selected location. It does not calculate, imply, store, or submit pricing. The receipt remains labeled as a request until a shop reply provides a real quote.
 
-Version 5 embeds the live TireConnect catalog directly using the existing Bazzi account widget and preserves the current Price My Tires website as a fallback. Earlier versions hand inventory traffic to the current site.
+Version 5 embeds the live TireConnect catalog directly using the existing Bazzi account widget, themes it with V5 signal orange, IBM Plex Sans, squared controls, and gunmetal borders, and preserves the current Price My Tires website as a fallback. Earlier versions hand inventory traffic to the current site.
 
 ## Publication flags
 
