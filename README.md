@@ -15,7 +15,7 @@ Private review deployments:
 - `/v2.html`: Version 2 porcelain, cobalt, and coral app-style redesign
 - `/v3.html`: Version 3 Detroit sign-shop, transit-board, and carbon-copy service-order design
 - `/v4.html`: Version 4 fluid editorial tire-ad design with curved road geometry and an open quote record
-- `/v5.html`: Version 5 Detroit Performance design with night-freeway imagery, pit-lane quote flow, and open telemetry
+- `/v5.html`: Version 5 Detroit Performance design with night-freeway imagery, pit-lane quote flow, open telemetry, and the live TireConnect inventory widget
 - `#quote`: interactive SMS quote-request builder and request receipt
 - `#promise`: three-step request and written-quote model
 - `#inventory`: handoff to the existing TireConnect-backed catalog
@@ -34,7 +34,7 @@ Private review deployments:
 
 The quote builder creates a client-side request ID and opens an SMS draft to the selected location. It does not calculate, imply, store, or submit pricing. The receipt remains labeled as a request until a shop reply provides a real quote.
 
-The inventory call to action opens the current Price My Tires website, where the existing TireConnect catalog is hosted.
+Version 5 embeds the live TireConnect catalog directly using the existing Bazzi account widget and preserves the current Price My Tires website as a fallback. Earlier versions hand inventory traffic to the current site.
 
 ## Publication flags
 
