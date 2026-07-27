@@ -1,0 +1,650 @@
+<!doctype html>
+<html lang="en" data-theme="porcelain">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Price My Tires V7 | Find Tires &amp; Get Your Out-the-Door Price</title>
+<meta name="description" content="Search tires, request a written out-the-door quote by text from MJ Express in Redford, Michigan. Tires, oil changes, brakes, and more.">
+<meta name="theme-color" content="#E31E24">
+<link rel="canonical" href="https://pricemytires.com/">
+<meta property="og:type" content="website"><meta property="og:title" content="Price My Tires | Find Tires. Get the Price."><meta property="og:description" content="Search live inventory and get a written out-the-door tire quote by text."><meta property="og:url" content="https://pricemytires.com/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700;800;900&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"AutomotiveBusiness","name":"Price My Tires","url":"https://pricemytires.com/","description":"Tire search, written out-the-door quotes, and full auto service in Redford, Michigan.","openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"08:00","closes":"15:00"}],"department":[{"@type":"AutoPartsStore","name":"MJ Express - Redford","telephone":"+1-313-300-8403","address":{"@type":"PostalAddress","streetAddress":"15150 Telegraph Rd","addressLocality":"Redford","addressRegion":"MI","addressCountry":"US"}}]}</script>
+<style>
+:root{--head:'Barlow Semi Condensed',Arial,sans-serif;--body:'IBM Plex Sans',Arial,sans-serif;--nav:64px;--orange:#E31E24;--yellow:#dfff00;--ease:cubic-bezier(.2,.8,.2,1)}
+
+/* ── Porcelain (default white theme) ── */
+html[data-theme="porcelain"]{--bg:#ffffff;--field:#f7f8fa;--field2:#f0f2f5;--ink:#111827;--muted:#6b7280;--line:rgba(0,0,0,.09);--accent:#E31E24;--hot:#dc2626;--navbg:rgba(255,255,255,.94);--glow:227,30,36;--photo:brightness(.9) contrast(1.05);--card-shadow:0 1px 3px rgba(0,0,0,.06),0 1px 2px rgba(0,0,0,.04);--nav-shadow:0 1px 3px rgba(0,0,0,.05)}
+
+/* ── Motor Black ── */
+html[data-theme="motor"]{--bg:#0a0c0d;--field:#111416;--field2:#171b1e;--ink:#f4f6f5;--muted:#9ba2a5;--line:rgba(244,246,245,.2);--accent:#E31E24;--hot:#dfff00;--navbg:rgba(9,11,12,.82);--glow:227,30,36;--photo:grayscale(.55) contrast(1.35) brightness(.64);--card-shadow:0 2px 8px rgba(0,0,0,.4);--nav-shadow:none}
+html[data-theme="steel"]{--bg:#101316;--field:#1a1f23;--field2:#242a2f;--ink:#edf1f3;--muted:#aab2b7;--line:rgba(237,241,243,.2);--accent:#E31E24;--hot:#dfff00;--navbg:rgba(16,19,22,.84);--glow:227,30,36;--photo:grayscale(.8) contrast(1.2) brightness(.7) hue-rotate(170deg);--card-shadow:0 2px 8px rgba(0,0,0,.4);--nav-shadow:none}
+html[data-theme="midnight"]{--bg:#05090e;--field:#0b1219;--field2:#111c25;--ink:#f1f6fa;--muted:#91a1ad;--line:rgba(224,237,247,.19);--accent:#E31E24;--hot:#e8ff29;--navbg:rgba(5,9,14,.84);--glow:227,30,36;--photo:grayscale(.7) contrast(1.45) brightness(.58) saturate(.7);--card-shadow:0 2px 8px rgba(0,0,0,.4);--nav-shadow:none}
+
+*,*::before,*::after{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:78px;overflow-x:hidden}body{margin:0;background:var(--bg);color:var(--ink);font:400 15px/1.55 var(--body);overflow-x:hidden;transition:background .3s,color .3s}button,input{font:inherit}button,a{-webkit-tap-highlight-color:transparent}a{color:inherit}img,svg{display:block}img{max-width:100%}::selection{background:var(--accent);color:#fff}:focus-visible{outline:2px solid var(--accent);outline-offset:4px}.skip{position:fixed;left:12px;top:-70px;z-index:10000;background:var(--accent);color:#fff;padding:10px 14px;font-weight:700;text-decoration:none}.skip:focus{top:10px}
+
+/* ── Loader ── */
+#loader{position:fixed;inset:0;z-index:99999;display:grid;place-items:center;transition:opacity .5s,visibility .5s}
+[data-theme="porcelain"] #loader{background:#fff}
+[data-theme="motor"] #loader,[data-theme="steel"] #loader,[data-theme="midnight"] #loader{background:#080a0b}
+.loaded #loader{opacity:0;visibility:hidden}
+.load-unit{width:220px;text-align:center}
+[data-theme="porcelain"] .load-unit{color:#111827}
+[data-theme="motor"] .load-unit,[data-theme="steel"] .load-unit,[data-theme="midnight"] .load-unit{color:#fff}
+.load-tire{width:84px;height:84px;margin:auto;border-radius:50%;position:relative;animation:spin 1s linear infinite}
+[data-theme="porcelain"] .load-tire{border:9px solid #e5e7eb}
+[data-theme="motor"] .load-tire,[data-theme="steel"] .load-tire,[data-theme="midnight"] .load-tire{border:9px solid #34393c}
+.load-tire::before{content:"";position:absolute;inset:-6px;border-radius:50%;border:2px dashed var(--accent)}
+.load-unit b{display:block;font:800 22px/1 var(--head);letter-spacing:.09em;margin-top:22px}
+.load-unit small{display:block;font-size:8px;letter-spacing:.24em;margin-top:8px}
+[data-theme="porcelain"] .load-unit small{color:#9ca3af}
+[data-theme="motor"] .load-unit small,[data-theme="steel"] .load-unit small,[data-theme="midnight"] .load-unit small{color:#8c9396}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ── Progress / Cursor / Atmosphere ── */
+#progress{position:fixed;z-index:9000;left:0;top:0;height:2px;width:0;background:var(--accent)}
+#cursorGlow{position:fixed;z-index:1;pointer-events:none;width:500px;height:500px;border-radius:50%;opacity:0;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(var(--glow),.08),transparent 67%)}.fine-pointer #cursorGlow{opacity:1}
+.atmosphere{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;opacity:.1}
+.atmosphere::before,.atmosphere::after{content:"";position:absolute}
+.bg-arc .atmosphere::before{width:72vw;height:72vw;border:1px solid var(--line);border-radius:50%;right:-34vw;top:8vh;box-shadow:0 0 0 54px transparent,0 0 0 55px var(--line),0 0 0 120px transparent,0 0 0 121px var(--line);animation:drift 14s ease-in-out infinite alternate}
+.bg-lanes .atmosphere::before{inset:-20%;background:repeating-linear-gradient(103deg,transparent 0 120px,var(--line) 121px 123px,transparent 124px 210px);animation:slide 18s linear infinite}
+.bg-trails .atmosphere::before{left:-20vw;top:38vh;width:145vw;height:36vh;border:1px solid var(--line);border-radius:50%;box-shadow:0 44px 0 -43px var(--line),0 92px 0 -91px var(--line);transform:rotate(-8deg);animation:drift 11s ease-in-out infinite alternate}
+.bg-tread .atmosphere::before{inset:-20%;background:repeating-linear-gradient(125deg,transparent 0 52px,var(--line) 53px 66px,transparent 67px 118px);transform:skewX(-12deg);animation:slide 20s linear infinite}
+.bg-radar .atmosphere::before{width:75vw;height:75vw;left:12vw;top:8vh;border:1px solid var(--line);border-radius:50%;background:conic-gradient(from 10deg,transparent 0 24.8%,var(--line) 25%,transparent 25.2% 49.8%,var(--line) 50%,transparent 50.2% 74.8%,var(--line) 75%,transparent 75.2%);animation:spin 70s linear infinite}
+.bg-dash .atmosphere::before{width:4px;height:170vh;left:58%;top:-30vh;background:repeating-linear-gradient(to bottom,var(--line) 0 45px,transparent 45px 108px);transform:rotate(22deg);animation:lane 10s linear infinite}
+.bg-rings .atmosphere::before{inset:-20%;background:repeating-radial-gradient(ellipse at 30% 55%,transparent 0 90px,var(--line) 91px 92px,transparent 93px 148px);animation:pulse 8s ease-in-out infinite}
+.bg-grid .atmosphere::before{inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:120px 120px;mask-image:linear-gradient(to bottom,transparent,black 30%,transparent)}
+.bg-apex .atmosphere::before{width:130vw;height:65vh;left:-15vw;top:27vh;border:2px solid var(--line);border-radius:50%;transform:rotate(12deg);box-shadow:0 0 0 60px transparent,0 0 0 61px var(--line);animation:drift 16s ease-in-out infinite alternate}
+.bg-clean .atmosphere{display:none}
+@keyframes drift{to{transform:translate(-3vw,3vh) rotate(-3deg)}}
+@keyframes slide{to{transform:translate3d(110px,-45px,0) skewX(-12deg)}}
+@keyframes lane{to{transform:translateY(-108px) rotate(22deg)}}
+@keyframes pulse{50%{opacity:.34;transform:scale(1.04)}}
+.motion-off *{animation-play-state:paused!important;transition-duration:0s!important}
+.motion-off .atmosphere,.motion-off #cursorGlow{display:none}
+
+/* ── Nav ── */
+.mast{position:fixed;inset:0 0 auto;z-index:7000;height:var(--nav);backdrop-filter:blur(12px);box-shadow:var(--nav-shadow)}
+[data-theme="porcelain"] .mast{background:var(--navbg);border-bottom:1px solid rgba(0,0,0,.06)}
+[data-theme="motor"] .mast,[data-theme="steel"] .mast,[data-theme="midnight"] .mast{background:linear-gradient(to bottom,var(--navbg),transparent)}
+.mast-in{height:100%;width:min(1440px,calc(100% - 42px));margin:auto;display:grid;grid-template-columns:auto 1fr auto;align-items:center}
+[data-theme="motor"] .mast-in,[data-theme="steel"] .mast-in,[data-theme="midnight"] .mast-in{border-bottom:1px solid var(--line)}
+.brand{text-decoration:none;font:800 15px/1 var(--head);letter-spacing:.08em}.brand span{color:var(--accent)}
+.nav{justify-self:center;display:flex;gap:34px}.nav a{text-decoration:none;text-transform:uppercase;font:600 9px/1 var(--body);letter-spacing:.16em;transition:color .2s}.nav a:hover{color:var(--accent)}
+.tools{display:flex;align-items:center;gap:7px}.version{font-size:8px;letter-spacing:.15em;color:var(--muted)}
+.icon{width:38px;height:38px;border:0;border-radius:50%;background:transparent;color:var(--ink);display:grid;place-items:center;cursor:pointer;transition:background .2s,color .2s}.icon:hover{background:var(--accent);color:#fff}.icon svg{width:17px;height:17px}
+.menu-btn,.mobile-menu{display:none}
+
+/* ── Settings ── */
+.settings{position:fixed;z-index:7600;right:18px;top:73px;width:min(320px,calc(100vw - 36px));max-height:calc(100vh - 92px);overflow:auto;background:var(--field2);padding:22px;box-shadow:0 25px 70px rgba(0,0,0,.28);transform:translateX(calc(100% + 45px));opacity:0;transition:.36s var(--ease);border:1px solid var(--line)}.settings.open{transform:none;opacity:1}
+.settings-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:15px}.settings-head b{font:800 23px var(--head);text-transform:uppercase;letter-spacing:.04em}
+.setting{border-top:1px solid var(--line);padding:14px 0}.setting-label{display:flex;justify-content:space-between;font-size:8px;text-transform:uppercase;letter-spacing:.17em;color:var(--muted)}
+.pickers{display:flex;flex-wrap:wrap;gap:7px}.picker{border:0;border-bottom:1px solid var(--line);background:transparent;color:var(--ink);font-size:9px;padding:8px 3px;cursor:pointer;transition:color .2s,border-color .2s}.picker.active{color:var(--accent);border-color:var(--accent)}
+.bg-pickers .picker{width:31px;height:31px;padding:0;border:1px solid var(--line);border-radius:50%}.bg-pickers .picker.active{background:var(--accent);color:#fff}
+.motion-toggle{border:0;background:none;color:var(--ink);font-weight:700;cursor:pointer}
+
+/* ── Mobile menu ── */
+.mobile-menu{position:fixed;z-index:6900;inset:var(--nav) 0 0;background:var(--bg);padding:42px 22px}.mobile-menu a{display:block;text-decoration:none;font:800 13vw/.95 var(--head);text-transform:uppercase;padding:8px 0}.mobile-menu.open{display:block}
+
+/* ── Main / Layout ── */
+main,footer{position:relative;z-index:2}
+.wrap{width:min(1320px,100%);margin:auto}
+.section-label{margin:0 0 18px;color:var(--accent);font-size:9px;text-transform:uppercase;letter-spacing:.2em}
+
+/* ── Hero (compact) ── */
+.hero{min-height:62vh;position:relative;overflow:hidden}
+[data-theme="porcelain"] .hero{background:#fff}
+[data-theme="motor"] .hero,[data-theme="steel"] .hero,[data-theme="midnight"] .hero{background:#080a0b}
+.hero-photo{position:absolute;inset:0}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center 47%;filter:var(--photo);transform:scale(1.02)}
+[data-theme="porcelain"] .hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,.97) 0%,rgba(255,255,255,.88) 35%,rgba(255,255,255,.5) 65%,rgba(255,255,255,.82) 100%),linear-gradient(0deg,#fff 0%,transparent 30%,rgba(255,255,255,.2) 100%)}
+[data-theme="motor"] .hero-photo::after,[data-theme="steel"] .hero-photo::after,[data-theme="midnight"] .hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,7,8,.98) 0%,rgba(5,7,8,.86) 39%,rgba(5,7,8,.35) 70%,rgba(5,7,8,.74) 100%),linear-gradient(0deg,#080a0b 0%,transparent 31%,rgba(0,0,0,.2) 100%)}
+/* hero-in now defined in split section above */
+.hero-copy{position:relative;z-index:3;width:65%}
+.eyebrow{margin:0 0 22px;display:flex;align-items:center;gap:13px;text-transform:uppercase;font-size:9px;letter-spacing:.22em}
+[data-theme="porcelain"] .eyebrow{color:#6b7280}
+[data-theme="motor"] .eyebrow,[data-theme="steel"] .eyebrow,[data-theme="midnight"] .eyebrow{color:#bcc2c4}
+.eyebrow::before{content:"";width:46px;height:3px;background:var(--accent)}
+.hero h1{margin:0;font:900 clamp(68px,9vw,138px)/.78 var(--head);letter-spacing:-.045em;text-transform:uppercase}
+[data-theme="porcelain"] .hero h1{color:#111827}
+[data-theme="motor"] .hero h1,[data-theme="steel"] .hero h1,[data-theme="midnight"] .hero h1{color:#f4f6f5}
+.hero h1 span{display:block}
+.hero h1 .outline{color:transparent}
+[data-theme="porcelain"] .hero h1 .outline{-webkit-text-stroke:1.5px #111827}
+[data-theme="motor"] .hero h1 .outline,[data-theme="steel"] .hero h1 .outline,[data-theme="midnight"] .hero h1 .outline{-webkit-text-stroke:1.5px #f4f6f5}
+.hero-body{max-width:460px;margin:32px 0 26px;font-size:clamp(15px,1.3vw,18px)}
+[data-theme="porcelain"] .hero-body{color:#4b5563}
+[data-theme="motor"] .hero-body,[data-theme="steel"] .hero-body,[data-theme="midnight"] .hero-body{color:#c2c7c9}
+.actions{display:flex;align-items:center;gap:28px}
+.cta{display:inline-flex;align-items:center;gap:16px;border:0;border-bottom:1px solid currentColor;padding:0 3px;min-height:50px;background:transparent;color:inherit;text-decoration:none;text-transform:uppercase;font-size:9px;font-weight:700;letter-spacing:.16em;cursor:pointer;transition:color .25s}.cta:hover{color:var(--accent)}
+.cta-primary{display:inline-flex;align-items:center;gap:12px;border:0;padding:14px 32px;background:var(--accent);color:#fff;text-decoration:none;text-transform:uppercase;font:700 11px/1 var(--body);letter-spacing:.14em;cursor:pointer;transition:background .25s,transform .15s}.cta-primary:hover{background:#c41a1f;transform:translateY(-1px)}.cta-primary svg{width:16px;height:16px}
+.cta-dot{width:42px;height:42px;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center}.cta-dot svg{width:18px}
+.micro-link{font-size:9px;text-transform:uppercase;letter-spacing:.14em}
+[data-theme="porcelain"] .micro-link{color:#6b7280}
+[data-theme="motor"] .micro-link,[data-theme="steel"] .micro-link,[data-theme="midnight"] .micro-link{color:#bec4c6}
+.tire-arc{position:absolute;z-index:2;width:min(50vw,720px);height:min(50vw,720px);border-radius:50%;right:-22vw;bottom:-24vw}
+[data-theme="porcelain"] .tire-arc{border:2px solid rgba(0,0,0,.06)}
+[data-theme="motor"] .tire-arc,[data-theme="steel"] .tire-arc,[data-theme="midnight"] .tire-arc{border:2px solid rgba(244,246,245,.25)}
+.tire-arc::after{content:"";position:absolute;inset:-11px;border-radius:50%}
+[data-theme="porcelain"] .tire-arc::after{border:11px dashed rgba(0,0,0,.04)}
+[data-theme="motor"] .tire-arc::after,[data-theme="steel"] .tire-arc::after,[data-theme="midnight"] .tire-arc::after{border:11px dashed rgba(244,246,245,.13)}
+.hero-code{position:absolute;right:2vw;top:18%;z-index:4;font:600 9px/1.9 var(--body);letter-spacing:.16em;text-align:right}
+[data-theme="porcelain"] .hero-code{color:#9ca3af}
+[data-theme="porcelain"] .hero-code b{color:var(--accent)}
+[data-theme="motor"] .hero-code,[data-theme="steel"] .hero-code,[data-theme="midnight"] .hero-code{color:#d9ddde}
+[data-theme="motor"] .hero-code b,[data-theme="steel"] .hero-code b,[data-theme="midnight"] .hero-code b{color:var(--hot)}
+
+
+/* ── Hero split: left copy + right TireConnect ── */
+.hero-in{width:min(1440px,calc(100% - 64px));min-height:62vh;margin:auto;padding:calc(var(--nav) + 5vh) 0 6vh;position:relative;display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,60px);align-items:center}
+.hero-tc{position:relative;z-index:3;background:rgba(255,255,255,.95);border-radius:8px;padding:20px;box-shadow:0 8px 32px rgba(0,0,0,.08);border:1px solid rgba(0,0,0,.06);min-height:400px}
+.hero-tc-head{font:700 13px/1 var(--body);text-transform:uppercase;letter-spacing:.08em;color:#E31E24;margin-bottom:14px;padding-bottom:12px;border-bottom:1px solid rgba(0,0,0,.06)}
+.hero-tc .tc-shell{min-height:380px}
+.hero-tc .tc-loading{min-height:340px;display:grid;place-items:center;color:#6b7280;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.hero-tc .tc-loading::before{content:"";width:40px;height:40px;border:4px solid #e5e7eb;border-top-color:#E31E24;border-radius:50%;animation:spin .9s linear infinite;margin-right:12px}
+
+/* ── TireConnect (prominent, right after hero) ── */
+.tireconnect-live{padding:clamp(60px,7vw,100px) max(18px,4vw);position:relative}
+[data-theme="porcelain"] .tireconnect-live{background:#f8f9fb;border-top:1px solid rgba(0,0,0,.05)}
+[data-theme="motor"] .tireconnect-live,[data-theme="steel"] .tireconnect-live,[data-theme="midnight"] .tireconnect-live{background:#f4f6f5;color:#0a0c0d}
+.tc-intro{width:min(1320px,100%);margin:0 auto 40px;text-align:center}
+.tc-intro h2{margin:0 0 16px;font:800 clamp(42px,5.5vw,78px)/.88 var(--head);letter-spacing:-.03em;text-transform:uppercase}
+[data-theme="porcelain"] .tc-intro h2{color:#111827}
+[data-theme="motor"] .tc-intro h2,[data-theme="steel"] .tc-intro h2,[data-theme="midnight"] .tc-intro h2{color:#0a0c0d}
+.tc-intro p{margin:0 auto;max-width:560px;font-size:clamp(14px,1.2vw,17px)}
+[data-theme="porcelain"] .tc-intro p{color:#6b7280}
+[data-theme="motor"] .tc-intro p,[data-theme="steel"] .tc-intro p,[data-theme="midnight"] .tc-intro p{color:#52595d}
+.tc-intro .section-label{color:#c41a1f;margin-bottom:14px}
+.tc-fallback{display:inline-block;margin-top:16px;color:#c41a1f;font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.tc-shell{width:min(1440px,100%);margin:auto;min-height:620px;position:relative}
+.tc-loading{min-height:420px;display:grid;place-items:center;border-top:1px solid #c6cacc;border-bottom:1px solid #c6cacc;color:#5e6568;font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase}
+.tc-loading::before{content:"";width:48px;height:48px;border:5px solid #ccd0d2;border-top-color:#E31E24;border-radius:50%;animation:spin .9s linear infinite;margin-right:14px}
+.tc-error{min-height:280px;display:grid;place-items:center;text-align:center;color:#50575a}
+
+/* TireConnect widget overrides */
+#tireconnect_v7,#tireconnect_v7 *,#tcwlw_modal_container,#tcwlw_modal_container *{--primary-color:#E31E24!important;--adapted-text-color:#fff!important}
+#tireconnect_v7 #tcwlw{color:#0a0c0d!important}
+#tireconnect_v7 :where(button,select,input,label,a,p,span),#tcwlw_modal_container :where(button,select,input,label,a,p,span){font-family:'IBM Plex Sans',Arial,sans-serif!important}
+#tireconnect_v7 :where(select,input),#tcwlw_modal_container :where(select,input){border-color:#7d8589!important;border-radius:0!important;color:#0a0c0d!important;box-shadow:none!important}
+#tireconnect_v7 :where(select,input):focus,#tcwlw_modal_container :where(select,input):focus{border-color:#E31E24!important;outline:2px solid rgba(227,30,36,.24)!important;outline-offset:1px!important}
+#tireconnect_v7 select:disabled,#tireconnect_v7 input:disabled,#tcwlw_modal_container select:disabled,#tcwlw_modal_container input:disabled{background:#e0e3e4!important;color:#5d6569!important;border-color:#b9bec1!important}
+#tireconnect_v7 button,#tcwlw_modal_container button{border-radius:0!important;font-weight:700!important;letter-spacing:.035em!important}
+#tireconnect_v7 button:not(:disabled),#tcwlw_modal_container button:not(:disabled){border-color:#E31E24!important}
+#tireconnect_v7 a,#tcwlw_modal_container a{color:#c41a1f!important}
+#tireconnect_v7 [data-tctid="search_items"]:not(:disabled),#tcwlw_modal_container [data-tctid="search_items"]:not(:disabled){background:#E31E24!important;color:#fff!important;border-color:#E31E24!important}
+#tireconnect_v7 [data-tctid="search_items"]:disabled{background:#8c9397!important;color:#fff!important;border-color:#8c9397!important}
+
+/* ── Quote form ── */
+section{scroll-margin-top:70px}
+.quote{padding:clamp(80px,10vw,140px) max(22px,5vw);background:var(--field);position:relative;overflow:hidden}
+.quote-head{display:grid;grid-template-columns:1fr 1fr;gap:8vw;align-items:end;margin-bottom:72px}
+.quote h2,.services h2,.locations h2{margin:0;font:800 clamp(48px,6.5vw,96px)/.84 var(--head);letter-spacing:-.035em;text-transform:uppercase}
+.quote-head p:last-child{max-width:460px;color:var(--muted)}
+.pit-form{position:relative}
+.route-line{position:absolute;left:4%;right:4%;top:35px;height:1px;background:var(--line)}.route-line::before{content:"";position:absolute;left:0;top:-2px;width:23%;height:5px;background:var(--accent);transform:skewX(-28deg)}
+.flow{display:grid;grid-template-columns:1.05fr .65fr 1.15fr 1fr .78fr;gap:clamp(14px,2.5vw,38px);position:relative}
+.checkpoint{min-width:0}
+.check-head{height:70px;display:flex;align-items:flex-start;gap:9px;text-transform:uppercase;font-size:8px;letter-spacing:.15em;color:var(--muted)}
+.check-head i{width:13px;height:13px;border-radius:50%;background:var(--field);border:2px solid var(--accent);box-shadow:0 0 0 5px var(--field);flex:0 0 auto}.check-head b{color:var(--ink);font-weight:700}
+.line-input{width:100%;height:48px;border:0;border-bottom:1px solid var(--ink);border-radius:0;background:transparent;color:var(--ink);padding:4px 0;font:600 clamp(16px,1.5vw,21px) var(--head)}.line-input:focus{outline:0;border-color:var(--accent)}.line-input::placeholder{color:var(--muted);opacity:.75}
+.choice-row{display:flex;flex-wrap:wrap;gap:10px 14px;min-height:48px;align-items:center;border-bottom:1px solid var(--ink)}
+.choice{position:relative}.choice input{position:absolute;opacity:0}.choice label{display:flex;gap:6px;align-items:center;cursor:pointer;font-size:9px;text-transform:uppercase;letter-spacing:.07em}.choice label::before{content:"";width:15px;height:15px;border:1px solid var(--muted);border-radius:50%}.choice input:checked+label::before{background:var(--accent);box-shadow:inset 0 0 0 4px var(--field)}
+.send-check .check-head i{border-color:var(--hot)}
+.flow-submit{height:48px;width:100%;justify-content:space-between;color:var(--ink)}
+.form-error{min-height:31px;padding-top:13px;color:var(--hot);font-size:9px;letter-spacing:.08em}
+.flow-note{font-size:8px;color:var(--muted);max-width:490px;margin-top:18px}
+.telemetry{display:none;margin-top:48px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:17px 0;align-items:center;gap:clamp(12px,3vw,42px);font-size:9px;text-transform:uppercase;letter-spacing:.11em;overflow-wrap:anywhere}
+.telemetry.ready{display:flex;animation:rise .4s var(--ease) both}
+.telemetry strong{color:var(--hot);font:700 14px var(--head)}
+.telemetry .state{color:var(--muted)}.telemetry .state b{color:var(--ink)}
+.telemetry .honor{margin-left:auto;color:var(--muted)}
+.telemetry .sms{color:var(--accent);font-weight:700;text-decoration:none;white-space:nowrap}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+/* ── Services ── */
+.services{padding:clamp(80px,10vw,140px) max(22px,5vw);position:relative;overflow:hidden}
+.services-head{text-align:center;margin-bottom:64px}
+.services-head h2{margin-bottom:18px}
+.services-head p{max-width:560px;margin:0 auto;color:var(--muted)}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.service-card{background:var(--field);padding:32px 28px;border-top:3px solid var(--accent);box-shadow:var(--card-shadow);transition:transform .2s,box-shadow .2s}
+.service-card:hover{transform:translateY(-3px)}
+[data-theme="porcelain"] .service-card:hover{box-shadow:0 8px 25px rgba(0,0,0,.08)}
+.service-card h3{font:700 16px/1.2 var(--head);text-transform:uppercase;letter-spacing:.03em;margin:0 0 10px}
+.service-card p{color:var(--muted);font-size:13px;line-height:1.55;margin:0}
+
+/* ── Locations ── */
+.locations{padding:clamp(80px,10vw,140px) max(22px,5vw);background:var(--field2);position:relative}
+.locations-head{text-align:center;margin-bottom:80px}
+.locations-head h2{margin-bottom:18px}
+.locations-head p{max-width:500px;margin:0 auto;color:var(--muted)}
+.loc-grid{display:grid;grid-template-columns:1fr;max-width:640px;gap:clamp(28px,5vw,60px)}
+.loc-card{background:var(--bg);padding:clamp(28px,3vw,48px);box-shadow:var(--card-shadow);border-top:4px solid var(--accent);display:flex;flex-direction:column}
+.loc-logo{max-width:200px;max-height:100px;object-fit:contain;margin-bottom:24px}
+.loc-tag{font-size:8px;text-transform:uppercase;letter-spacing:.2em;color:var(--accent);margin-bottom:6px}
+.loc-card h3{margin:0 0 16px;font:800 clamp(32px,4vw,52px)/.85 var(--head);text-transform:uppercase}
+.loc-desc{color:var(--muted);font-size:14px;line-height:1.65;margin:0 0 24px;flex:1}
+.loc-card address{font-style:normal;font-size:15px;margin-bottom:8px}
+.loc-phone{display:inline-block;margin:10px 0 20px;font:700 clamp(22px,2.2vw,32px) var(--head);text-decoration:none;color:var(--ink)}
+.loc-phone:hover{color:var(--accent)}
+.loc-hours{font-size:10px;line-height:1.95;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}
+.loc-actions{display:flex;gap:14px;margin-top:22px;flex-wrap:wrap}
+.loc-link{display:inline-flex;align-items:center;gap:6px;color:var(--accent);font-size:9px;text-transform:uppercase;letter-spacing:.13em;font-weight:700;text-decoration:none;transition:opacity .2s}.loc-link:hover{opacity:.75}
+.loc-link svg{width:14px;height:14px}
+.concept-flag{margin:70px auto 0;max-width:700px;border-top:1px solid var(--line);padding-top:18px;color:var(--muted);font-size:10px;text-align:center}
+.concept-flag b{color:var(--accent);text-transform:uppercase;letter-spacing:.13em}
+
+/* ── Footer ── */
+.colophon{padding:45px max(22px,5vw) 28px;background:#111827;color:#f4f6f5;border-top:1px solid rgba(255,255,255,.15)}
+.foot{width:min(1320px,100%);margin:auto;display:grid;grid-template-columns:1fr auto;gap:35px}
+.foot-brand{font:800 clamp(26px,3.5vw,48px)/1 var(--head);text-transform:uppercase}.foot-brand span{color:var(--accent)}
+.foot-links{display:flex;align-items:center;gap:22px}.foot-links a{font-size:8px;text-transform:uppercase;letter-spacing:.14em;color:#f4f6f5;text-decoration:none}.foot-links a:hover{color:var(--accent)}
+.legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.15);padding-top:18px;color:#8e9699;font-size:8px}
+
+/* ── Reveal / Utilities ── */
+.reveal{opacity:0;transform:translateY(25px);transition:opacity .7s var(--ease),transform .7s var(--ease)}.reveal.in{opacity:1;transform:none}
+.sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+/* ── Responsive ── */
+@media(max-width:980px){
+.nav{display:none}.menu-btn{display:grid}
+.hero-copy{width:82%}
+.flow{grid-template-columns:1fr 1fr}.route-line{display:none}.checkpoint{margin-bottom:20px}.send-check{grid-column:1/-1}
+.quote-head{grid-template-columns:1fr}
+.services-grid{grid-template-columns:1fr 1fr}
+.loc-grid{gap:24px}
+}
+@media(max-width:680px){
+:root{--nav:58px}
+.mast-in{width:calc(100% - 24px)}
+.brand{font-size:12px}
+.version{display:none}
+.hero{min-height:auto}
+.hero-in{width:calc(100% - 32px);min-height:auto;padding-top:85px;align-items:flex-start;grid-template-columns:1fr;gap:24px}
+.hero-copy{width:100%}
+.eyebrow{margin-bottom:20px}
+.hero h1{font-size:clamp(52px,16vw,68px);line-height:.8}
+.hero-body{max-width:88%;margin:24px 0 20px;font-size:14px}
+.actions{align-items:flex-start;flex-direction:column;gap:14px}
+.hero-photo img{object-position:60% center}
+[data-theme="porcelain"] .hero-photo::after{background:linear-gradient(90deg,rgba(255,255,255,.98),rgba(255,255,255,.7)),linear-gradient(0deg,#fff 0%,transparent 40%)}
+[data-theme="motor"] .hero-photo::after,[data-theme="steel"] .hero-photo::after,[data-theme="midnight"] .hero-photo::after{background:linear-gradient(90deg,rgba(5,7,8,.97),rgba(5,7,8,.6)),linear-gradient(0deg,#080a0b 0%,transparent 45%)}
+.tire-arc{width:80vw;height:80vw;right:-50vw;bottom:-20vw}
+.hero-code{top:auto;bottom:18px;right:14px;font-size:7px}
+.tireconnect-live{padding:50px 10px}
+.tc-intro h2{font-size:clamp(36px,10vw,48px)}
+.tc-shell{min-height:600px}
+.quote{padding:70px 18px}
+.quote h2,.services h2,.locations h2{font-size:clamp(40px,11vw,54px)}
+.quote-head{margin-bottom:50px}
+.flow{grid-template-columns:1fr}.send-check{grid-column:auto}
+.check-head{height:38px}
+.route-line{display:block;left:6px;right:auto;top:0;bottom:0;width:1px;height:auto}.route-line::before{display:none}
+.checkpoint{padding-left:28px;position:relative;margin-bottom:24px}
+.check-head i{position:absolute;left:-1px;top:1px;box-shadow:0 0 0 5px var(--field)}
+.telemetry.ready{align-items:flex-start;flex-direction:column;gap:7px}.telemetry .honor{margin-left:0}
+.services{padding:70px 18px}
+.services-grid{grid-template-columns:1fr}
+.locations{padding:70px 18px}
+.locations-head{margin-bottom:50px}
+.loc-grid{grid-template-columns:1fr}
+.loc-card h3{font-size:clamp(34px,9vw,46px)}
+.concept-flag{margin-top:55px}
+.foot{grid-template-columns:1fr}
+.foot-links{flex-wrap:wrap}
+.settings{top:65px;right:9px;width:calc(100vw - 18px)}
+#cursorGlow{display:none}
+}
+
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}.atmosphere,#cursorGlow{display:none}}
+@media print{#loader,#progress,#cursorGlow,.atmosphere,.mast,.settings,.mobile-menu,.tire-arc,.tread-art{display:none!important}body{background:#fff;color:#000}.hero{min-height:auto;background:#fff}.hero-photo{display:none}.hero-in{min-height:auto;padding:30px}.hero h1,.hero-body{color:#000}.quote,.services,.locations{padding:35px 20px;background:#fff;color:#000}.tireconnect-live{padding:20px;background:#fff}.reveal{opacity:1;transform:none}.colophon{background:#fff;color:#000}}
+</style>
+</head>
+<body class="bg-clean">
+<a class="skip" href="#tireconnect_v7">Skip to tire search</a>
+<div id="loader" aria-hidden="true"><div class="load-unit"><div class="load-tire"></div><b>PRICE MY TIRES</b><small>LOADING</small></div></div>
+<div id="progress" aria-hidden="true"></div>
+<div id="cursorGlow" aria-hidden="true"></div>
+<div class="atmosphere" aria-hidden="true"></div>
+
+<!-- ── NAV ── -->
+<header class="mast">
+<div class="mast-in">
+<a class="brand" href="#top" aria-label="Price My Tires home">PRICE MY <span>TIRES</span></a>
+<nav class="nav" aria-label="Primary">
+<a href="#tireconnect_v7">Find Tires</a>
+<a href="#quote">Get a Quote</a>
+<a href="#services">Services</a>
+<a href="#locations">Locations</a>
+</nav>
+<div class="tools">
+<span class="version">V7</span>
+<button class="icon" id="settingsBtn" type="button" aria-label="Open settings" aria-expanded="false" aria-controls="settings">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1-2.8 2.8-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.6v.2h-4V21a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1L4.2 17l.1-.1a1.7 1.7 0 0 0 .3-1.9A1.7 1.7 0 0 0 3 14H2.8v-4H3a1.7 1.7 0 0 0 1.6-1 1.7 1.7 0 0 0-.3-1.9L4.2 7 7 4.2l.1.1a1.7 1.7 0 0 0 1.9.3A1.7 1.7 0 0 0 10 3V2.8h4V3a1.7 1.7 0 0 0 1 1.6 1.7 1.7 0 0 0 1.9-.3l.1-.1L19.8 7l-.1.1a1.7 1.7 0 0 0-.3 1.9 1.7 1.7 0 0 0 1.6 1h.2v4H21a1.7 1.7 0 0 0-1.6 1z"/></svg>
+</button>
+<button class="icon menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 8h16M4 16h16"/></svg>
+</button>
+</div>
+</div>
+</header>
+
+<!-- ── MOBILE MENU ── -->
+<nav class="mobile-menu" id="mobileMenu" aria-hidden="true">
+<a href="#tireconnect_v7">Find Tires</a>
+<a href="#quote">Get a Quote</a>
+<a href="#services">Services</a>
+<a href="#locations">Locations</a>
+</nav>
+
+<!-- ── SETTINGS ── -->
+<aside class="settings" id="settings" aria-label="Design settings">
+<div class="settings-head">
+<b>Setup</b>
+<button class="icon" id="settingsClose" type="button" aria-label="Close settings">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 5l14 14M19 5L5 19"/></svg>
+</button>
+</div>
+<div class="setting">
+<p class="setting-label"><span>Theme</span><span>4</span></p>
+<div class="pickers" id="themeGrid"></div>
+</div>
+<div class="setting">
+<p class="setting-label"><span>Voice</span><span>7</span></p>
+<div class="pickers" id="voiceGrid"></div>
+</div>
+<div class="setting">
+<p class="setting-label"><span>Road layer</span><span>10</span></p>
+<div class="pickers bg-pickers" id="bgGrid"></div>
+</div>
+<div class="setting">
+<p class="setting-label"><span>Motion</span>
+<button class="motion-toggle" id="motionToggle" type="button" aria-pressed="true">RUNNING</button></p>
+</div>
+</aside>
+
+<main>
+<!-- ══════════════════════════════════════════════ -->
+<!-- ── HERO (compact) ── -->
+<!-- ══════════════════════════════════════════════ -->
+<section class="hero" id="top">
+<div class="hero-photo">
+<img src="assets/tire-shop.jpg" alt="Tire shop worker moving a tire through shop inventory" width="1600" height="1000">
+</div>
+<div class="hero-in">
+<div class="hero-copy">
+<p class="eyebrow" data-copy="heroEye">Redford, Michigan / MJ Express</p>
+<h1>
+<span data-copy="heroLineOne">Find your tires.</span>
+<span class="outline" data-copy="heroLineTwo">Get the price.</span>
+</h1>
+<p class="hero-body" data-copy="heroBody">Search live inventory and request a written, itemized out-the-door quote by text. No teaser pricing. No calculator fiction.</p>
+<div class="actions">
+<a class="cta-primary magnetic" href="#tireconnect_v7">
+<span data-copy="heroCta">Search Tires Now</span>
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+</a>
+<a class="micro-link" href="#quote">Or request a quote</a>
+</div>
+</div>
+<div class="hero-tc">
+<div class="hero-tc-head">Search Live Tire Inventory</div>
+<div class="tc-shell" id="tireconnect_v7">
+<div class="tc-loading">Loading TireConnect inventory</div>
+</div>
+</div>
+<div class="tire-arc" aria-hidden="true"></div>
+</div>
+</section>
+
+
+
+<!-- ══════════════════════════════════════════════ -->
+<!-- ── QUOTE REQUEST ── -->
+<!-- ══════════════════════════════════════════════ -->
+<section class="quote" id="quote">
+<div class="wrap">
+<div class="quote-head reveal">
+<div>
+<p class="section-label">Request a Quote</p>
+<h2 data-copy="quoteTitle">Send the size.<br>Pick the counter.</h2>
+</div>
+<p data-copy="quoteBody">Five checkpoints. One clean text. The selected shop replies with price, availability, and what the number includes.</p>
+</div>
+<form class="pit-form reveal" id="quoteForm" novalidate>
+<div class="route-line" aria-hidden="true"></div>
+<div class="flow">
+<div class="checkpoint">
+<div class="check-head"><i></i><b>Size</b></div>
+<label class="sr-only" for="tireSize">Tire size</label>
+<input class="line-input" id="tireSize" name="tireSize" maxlength="20" autocomplete="off" placeholder="225/60R16" required>
+</div>
+<div class="checkpoint">
+<div class="check-head"><i></i><b>Vehicle</b></div>
+<label class="sr-only" for="year">Vehicle year</label>
+<input class="line-input" id="year" name="year" inputmode="numeric" maxlength="4" autocomplete="off" placeholder="2016" required>
+</div>
+<div class="checkpoint">
+<div class="check-head"><i></i><b>Vehicle</b></div>
+<label class="sr-only" for="vehicle">Make and model</label>
+<input class="line-input" id="vehicle" name="vehicle" maxlength="60" autocomplete="off" placeholder="Chevrolet Malibu" required>
+</div>
+<div class="checkpoint">
+<div class="check-head"><i></i><b>Tire / Shop</b></div>
+<div class="choice-row">
+<span class="choice"><input type="radio" id="prefNew" name="preference" value="New" checked><label for="prefNew">New</label></span>
+<span class="choice"><input type="radio" id="prefUsed" name="preference" value="Used"><label for="prefUsed">Used</label></span>
+<span class="choice"><input type="radio" id="prefBoth" name="preference" value="New or used"><label for="prefBoth">Both</label></span>
+</div>
+<input type="hidden" name="location" value="redford">
+</div>
+<div class="checkpoint send-check">
+<div class="check-head"><i></i><b>Text</b></div>
+<button class="cta flow-submit magnetic" type="submit">
+<span data-copy="formCta">Build the text</span>
+<span class="cta-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/></svg></span>
+</button>
+</div>
+</div>
+<div class="form-error" id="formError" role="alert" aria-live="polite"></div>
+<p class="flow-note">Nothing is stored or sent by this page. Review the prepared draft in your messaging app before sending.</p>
+</form>
+<div class="telemetry" id="telemetry" aria-live="polite">
+<span>Request <strong id="rId">PMT-PENDING</strong></span>
+<span class="state">State / <b>READY FOR SHOP REPLY</b></span>
+<span class="honor">Eventual shop phrase: This number is honored at the counter.</span>
+<a class="sms" id="smsButton" href="#quote">OPEN TEXT</a>
+</div>
+</div>
+</section>
+
+<!-- ══════════════════════════════════════════════ -->
+<!-- ── SERVICES ── -->
+<!-- ══════════════════════════════════════════════ -->
+<section class="services" id="services">
+<div class="wrap">
+<div class="services-head reveal">
+<p class="section-label">What We Do</p>
+<h2>Full Service.<br>MJ Express Redford.</h2>
+<p>From tires and oil changes to brakes and more. Drive-thru convenience in Redford.</p>
+</div>
+<div class="services-grid reveal">
+<div class="service-card">
+<h3>Tires &amp; Wheels</h3>
+<p>New and used tires, mounting, balancing, and wheel services with online appointment scheduling.</p>
+</div>
+<div class="service-card">
+<h3>Drive-Thru Oil Change</h3>
+<p>Quick drive-thru oil changes in Redford. Valvoline, Mobil, Motorcraft, Royal Purple, Shell, and more. No appointment needed.</p>
+</div>
+<div class="service-card">
+<h3>Brakes</h3>
+<p>Complete brake service including pads, rotors, and diagnostics at our Redford location.</p>
+</div>
+<div class="service-card">
+<h3>Alignments</h3>
+<p>Precision wheel alignments to extend tire life and improve handling. Available at our Redford location.</p>
+</div>
+<div class="service-card">
+<h3>Steering &amp; Suspension</h3>
+<p>Full steering and suspension repair and replacement. Shocks, struts, tie rods, and more at our Redford shop.</p>
+</div>
+<div class="service-card">
+<h3>Engine &amp; Transmission</h3>
+<p>Complete mechanical service at our Redford location. Engines, transmissions, and everything in between. We do it all.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ══════════════════════════════════════════════ -->
+<!-- ── LOCATIONS ── -->
+<!-- ══════════════════════════════════════════════ -->
+<section class="locations" id="locations">
+<div class="wrap">
+<div class="locations-head reveal">
+<p class="section-label">Our Locations</p>
+<h2>Visit Us.</h2>
+<p>Monday through Friday 8 to 6. Saturday 8 to 3. Sunday closed.</p>
+</div>
+<div class="loc-grid reveal">
+
+<!-- ── REDFORD / MJ EXPRESS ── -->
+<article class="loc-card">
+<img class="loc-logo" src="assets/mj-express-logo.jpg" alt="MJ Express Logo" width="200" height="80">
+<span class="loc-tag">Redford / Telegraph</span>
+<h3>Redford</h3>
+<p class="loc-desc">Formerly the Valvoline Express Care drive-thru oil change&mdash;now expanded and better than ever. We offer drive-thru oil changes with top brands like Valvoline, Mobil, Motorcraft, Royal Purple, Shell, and many more. Plus, we&rsquo;ve expanded our tire business into this location with online appointment scheduling for tire service in Redford. We also do brakes.</p>
+<address>15150 Telegraph Rd<br>Redford, Michigan</address>
+<a class="loc-phone" href="tel:+13133008403">313.300.8403</a>
+<div class="loc-hours">Mon&ndash;Fri / 8 AM&ndash;6 PM<br>Sat / 8 AM&ndash;3 PM<br>Sunday / Closed</div>
+<div class="loc-actions">
+<a class="loc-link" href="https://www.google.com/maps/search/?api=1&query=15150+Telegraph+Rd+Redford+MI" target="_blank" rel="noopener">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+Get Directions
+</a>
+<a class="loc-link" href="#quote">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/></svg>
+Request Quote
+</a>
+</div>
+</article>
+
+</div>
+<aside class="concept-flag reveal">
+<b>Publication flags / not current services:</b> Sunday service, 24/7 quoting, and a five-minute response promise remain unverified future concepts. Current Sunday status is closed.
+</aside>
+</div>
+</section>
+</main>
+
+<!-- ══════════════════════════════════════════════ -->
+<!-- ── FOOTER ── -->
+<!-- ══════════════════════════════════════════════ -->
+<footer class="colophon">
+<div class="foot">
+<div class="foot-brand">Price My Tires / <span>The Number</span></div>
+<div class="foot-links">
+<a href="#tireconnect_v7">Find Tires</a>
+<a href="#quote">Quote</a>
+<a href="#locations">Locations</a>
+</div>
+<div class="legal">
+<p><b>PUBLICATION FLAGS:</b> Sunday service, 24/7 quoting, a five-minute response promise, and Bazzi ownership require confirmation before publication. They are not encoded as business facts.</p>
+<p>A request is not a quote. Only the selected shop reply establishes price, included services, availability, and validity. &copy; <span id="yearNow"></span> Price My Tires / VERSION 7.</p>
+</div>
+</div>
+</footer>
+
+<script src="https://app.tireconnect.ca/js/widget.js"></script>
+<script>
+(()=>{"use strict";
+const d=document,root=d.documentElement,body=d.body,$=s=>d.querySelector(s),$$=s=>[...d.querySelectorAll(s)];
+
+/* ── Themes (4 total, porcelain default) ── */
+const themes={porcelain:"Porcelain White",motor:"Motor Black",steel:"Cold Steel",midnight:"Midnight Blue"};
+const backgrounds={arc:"Sidewall Arc",lanes:"Lane Lines",trails:"Speed Trails",tread:"Tread",radar:"Telemetry Radar",dash:"Center Dash",rings:"Range Rings",grid:"Engineering Grid",apex:"Apex",clean:"Clean"};
+
+/* ── 7 Voice packs ── */
+const voices={
+number:{name:"The Number",heroEye:"Redford, Michigan / MJ Express",heroLineOne:"Find your tires.",heroLineTwo:"Get the price.",heroBody:"Search live inventory and request a written, itemized out-the-door quote by text. No teaser pricing. No calculator fiction.",heroCta:"Search Tires Now",quoteTitle:"Send the size.<br>Pick the counter.",quoteBody:"Five checkpoints. One clean text. The selected shop replies with price, availability, and what the number includes.",formCta:"Build the text",processTitle:"Three moves.<br>No detours.",processBody:"Read what is already on the tire. Route the request. Keep the written answer.",stepOneTitle:"Read the sidewall.",stepOneBody:"Find the tire size. Add the year, make, and model.",stepTwoTitle:"Choose the counter.",stepTwoBody:"Send the request to Redford. You control the text.",stepThreeTitle:"Keep the number.",stepThreeBody:"Hold the written, itemized shop reply. The price is the price."},
+blunt:{name:"Straight",heroEye:"No teaser / no invented price",heroLineOne:"Send the size.",heroLineTwo:"Get the total.",heroBody:"Give the shop the fitment. Get the complete number back in writing.",heroCta:"Ask the counter",quoteTitle:"Five facts.<br>One useful text.",quoteBody:"The page builds the request. The shop supplies the only number that matters.",formCta:"Make the request",processTitle:"Cut the noise.<br>Keep the price.",processBody:"Correct input. Correct counter. Written answer.",stepOneTitle:"Get the size.",stepOneBody:"Read the sidewall and identify the vehicle.",stepTwoTitle:"Pick the shop.",stepTwoBody:"Telegraph Rd. Route it once.",stepThreeTitle:"Hold the reply.",stepThreeBody:"Keep the actual shop number in the thread."},
+shop:{name:"Counter",heroEye:"Direct line to the tire counter",heroLineOne:"Ask the shop.",heroLineTwo:"Know the price.",heroBody:"Text the fitment to a real counter. Get price and availability from the source.",heroCta:"Start the ask",quoteTitle:"Build it clean.<br>Send it direct.",quoteBody:"Size, vehicle, preference, and shop become one ready-to-review SMS draft.",formCta:"Route to shop",processTitle:"Sidewall.<br>Counter. Number.",processBody:"Three points. Nothing extra.",stepOneTitle:"Copy the fitment.",stepOneBody:"Put the exact tire size beside the vehicle.",stepTwoTitle:"Select the line.",stepTwoBody:"Send it to the Redford counter.",stepThreeTitle:"Save the answer.",stepThreeBody:"The written shop reply stays with the ask."},
+local:{name:"Redford",heroEye:"Telegraph Rd / Redford",heroLineOne:"Redford roads.",heroLineTwo:"Real numbers.",heroBody:"Send the tire details to Redford. Get the counter price in writing.",heroCta:"Choose the road",quoteTitle:"Point the request.<br>Run it local.",quoteBody:"A short route from sidewall to the counter you choose.",formCta:"Open the route",processTitle:"One shop.<br>One method.",processBody:"Read. Route. Keep.",stepOneTitle:"Read the rubber.",stepOneBody:"Capture size and vehicle before the text.",stepTwoTitle:"Take the right exit.",stepTwoBody:"Redford on Telegraph.",stepThreeTitle:"Carry the number.",stepThreeBody:"Keep the quote response for the counter."},
+dispatch:{name:"Dispatch",heroEye:"Fitment request routing / customer initiated",heroLineOne:"Input clean.",heroLineTwo:"Route direct.",heroBody:"Validate the tire packet. Assign a counter. Open the prepared SMS.",heroCta:"Build packet",quoteTitle:"Capture.<br>Assign. Transmit.",quoteBody:"Required fitment data produces a complete request without producing a fake price.",formCta:"Generate SMS",processTitle:"Three-stage<br>dispatch.",processBody:"Fitment capture. Counter assignment. Reply record.",stepOneTitle:"Capture input.",stepOneBody:"Log size, year, make, model, and preference.",stepTwoTitle:"Assign counter.",stepTwoBody:"Route to the Redford shop line.",stepThreeTitle:"Record output.",stepThreeBody:"Keep the reply with the client-side request ID."},
+fast:{name:"Night Run",heroEye:"Complete request / fewer callbacks",heroLineOne:"Move fast.",heroLineTwo:"Ask complete.",heroBody:"Send the details once. Wait for the real answer, not an estimate.",heroCta:"Run the request",quoteTitle:"No backtrack.<br>Send it right.",quoteBody:"Complete inputs make a faster conversation. The shop still controls price and timing.",formCta:"Open the line",processTitle:"Green lights.<br>All three.",processBody:"Get the fitment. Hit the right line. Keep the answer.",stepOneTitle:"Find it now.",stepOneBody:"Read the tire and identify the vehicle.",stepTwoTitle:"Hit the line.",stepTwoBody:"Send the full request to the shop.",stepThreeTitle:"Wait for real.",stepThreeBody:"Speed does not turn an estimate into a quote."},
+practical:{name:"Practical",heroEye:"A simple way to ask for the full price",heroLineOne:"Text the tire.",heroLineTwo:"Get the answer.",heroBody:"Tell the shop what fits and what you want. They send the out-the-door number.",heroCta:"Prepare my text",quoteTitle:"Tell the shop.<br>Keep it simple.",quoteBody:"Put every useful detail into one message for the location you choose.",formCta:"Prepare the text",processTitle:"Easy from here.<br>Three steps.",processBody:"Check the tire. Choose the shop. Save the reply.",stepOneTitle:"Check the sidewall.",stepOneBody:"Find the size and add the vehicle.",stepTwoTitle:"Choose a location.",stepTwoBody:"Send to Redford.",stepThreeTitle:"Keep their text.",stepThreeBody:"The request and shop answer stay together."}
+};
+
+/* ── Storage (v6 keys to avoid conflict with v5) ── */
+const store={get(k,f){try{return localStorage.getItem(k)||f}catch(e){return f}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
+
+/* ── Theme / Background / Voice setters ── */
+function setTheme(v){if(!themes[v])v="porcelain";root.dataset.theme=v;$$('#themeGrid .picker').forEach(b=>b.classList.toggle('active',b.dataset.value===v));store.set('pmt-v7-theme',v)}
+function setBg(v){if(!backgrounds[v])v="clean";Object.keys(backgrounds).forEach(k=>body.classList.remove('bg-'+k));body.classList.add('bg-'+v);$$('#bgGrid .picker').forEach(b=>b.classList.toggle('active',b.dataset.value===v));store.set('pmt-v7-bg',v)}
+function setVoice(v){if(!voices[v])v="number";const copy=voices[v];$$('[data-copy]').forEach(el=>{const key=el.dataset.copy;if(copy[key])el.innerHTML=copy[key]});$$('#voiceGrid .picker').forEach(b=>b.classList.toggle('active',b.dataset.value===v));store.set('pmt-v7-voice',v)}
+
+/* ── Build settings pickers ── */
+Object.keys(themes).forEach(k=>{const b=d.createElement('button');b.type='button';b.className='picker';b.dataset.value=k;b.textContent=themes[k];b.addEventListener('click',()=>setTheme(k));$('#themeGrid').appendChild(b)});
+Object.keys(voices).forEach(k=>{const b=d.createElement('button');b.type='button';b.className='picker';b.dataset.value=k;b.textContent=voices[k].name;b.addEventListener('click',()=>setVoice(k));$('#voiceGrid').appendChild(b)});
+Object.keys(backgrounds).forEach((k,i)=>{const b=d.createElement('button');b.type='button';b.className='picker';b.dataset.value=k;b.textContent=String(i+1);b.title=backgrounds[k];b.setAttribute('aria-label',backgrounds[k]+' background');b.addEventListener('click',()=>setBg(k));$('#bgGrid').appendChild(b)});
+
+/* ── Initialize with defaults ── */
+setTheme(store.get('pmt-v7-theme','porcelain'));
+setBg(store.get('pmt-v7-bg','clean'));
+setVoice(store.get('pmt-v7-voice','number'));
+
+/* ── Settings panel ── */
+const settings=$('#settings'),settingsBtn=$('#settingsBtn');
+function closeSettings(){settings.classList.remove('open');settingsBtn.setAttribute('aria-expanded','false')}
+settingsBtn.addEventListener('click',e=>{e.stopPropagation();const open=settings.classList.toggle('open');settingsBtn.setAttribute('aria-expanded',String(open))});
+$('#settingsClose').addEventListener('click',closeSettings);
+settings.addEventListener('click',e=>e.stopPropagation());
+d.addEventListener('click',closeSettings);
+
+/* ── Motion toggle ── */
+let motion=store.get('pmt-v7-motion','on')!=='off';
+const motionToggle=$('#motionToggle');
+function renderMotion(){body.classList.toggle('motion-off',!motion);motionToggle.textContent=motion?'RUNNING':'STILL';motionToggle.setAttribute('aria-pressed',String(motion))}
+renderMotion();
+motionToggle.addEventListener('click',()=>{motion=!motion;store.set('pmt-v7-motion',motion?'on':'off');renderMotion()});
+
+/* ── Mobile menu ── */
+const menuBtn=$('#menuBtn'),mobileMenu=$('#mobileMenu');
+function setMenu(open){mobileMenu.classList.toggle('open',open);mobileMenu.setAttribute('aria-hidden',String(!open));menuBtn.setAttribute('aria-expanded',String(open));menuBtn.setAttribute('aria-label',open?'Close menu':'Open menu');body.style.overflow=open?'hidden':''}
+menuBtn.addEventListener('click',()=>setMenu(!mobileMenu.classList.contains('open')));
+$$('#mobileMenu a').forEach(a=>a.addEventListener('click',()=>setMenu(false)));
+d.addEventListener('keydown',e=>{if(e.key==='Escape'){setMenu(false);closeSettings()}});
+
+/* ── Scroll reveal ── */
+const reveals=$$('.reveal');
+function revealFallback(){reveals.forEach(el=>{if(el.getBoundingClientRect().top<innerHeight*.96)el.classList.add('in')})}
+if('IntersectionObserver'in window){const io=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('in');io.unobserve(entry.target)}}),{threshold:.05});reveals.forEach(el=>io.observe(el));setTimeout(revealFallback,650)}else{addEventListener('scroll',revealFallback,{passive:true});revealFallback()}
+
+/* ── Scroll progress ── */
+function scrollState(){const max=d.documentElement.scrollHeight-innerHeight;$('#progress').style.width=(max?scrollY/max*100:0)+'%'}
+addEventListener('scroll',scrollState,{passive:true});scrollState();
+
+/* ── Cursor glow + magnetic buttons ── */
+if(matchMedia('(pointer:fine)').matches){body.classList.add('fine-pointer');addEventListener('pointermove',e=>{if(!motion)return;$('#cursorGlow').style.left=e.clientX+'px';$('#cursorGlow').style.top=e.clientY+'px'},{passive:true});$$('.magnetic').forEach(b=>{b.addEventListener('pointermove',e=>{if(!motion)return;const r=b.getBoundingClientRect();b.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.06}px,${(e.clientY-r.top-r.height/2)*.08}px)`});b.addEventListener('pointerleave',()=>b.style.transform='')})}
+
+/* ── Quote form ── */
+const locs={redford:{name:'Redford / Telegraph',phone:'3133008403'}};
+function clean(v){return v.trim().replace(/[<>\r\n]/g,' ').replace(/\s+/g,' ')}
+function requestId(){const a=new Uint16Array(2);if(window.crypto&&crypto.getRandomValues)crypto.getRandomValues(a);else{a[0]=Math.random()*65535;a[1]=Date.now()%65535}return'PMT-'+String((a[0]^a[1])%9000+1000)}
+$('#quoteForm').addEventListener('submit',e=>{e.preventDefault();const size=clean($('#tireSize').value),year=clean($('#year').value),vehicle=clean($('#vehicle').value),error=$('#formError');if(!size||!/^(19|20)\d{2}$/.test(year)||!vehicle){error.textContent='CHECK SIZE, FOUR-DIGIT YEAR, AND MAKE / MODEL.';return}error.textContent='';const pref=$('input[name="preference"]:checked').value,key=$('input[name="location"]:checked').value,loc=locs[key],id=requestId(),message=`Price My Tires request ${id}\nTire size: ${size}\nVehicle: ${year} ${vehicle}\nPreference: ${pref}\nShop: ${loc.name}\nPlease reply with a written, itemized out-the-door quote, availability, included services, and validity.`,sms='sms:'+loc.phone+'?body='+encodeURIComponent(message);$('#rId').textContent=id;$('#smsButton').href=sms;$('#telemetry').classList.add('ready');$('#telemetry').scrollIntoView({behavior:motion?'smooth':'auto',block:'nearest'})});
+
+/* ── TireConnect initialization ── */
+function initTireConnect(attempt){attempt=attempt||0;const host=$('#tireconnect_v7');if(!host)return;if(window.TCWidget){try{host.innerHTML='';window.TCWidget.init({apikey:'ad3fd73542378c28f465e66de6638485',container:'tireconnect_v7'});host.dataset.status='initialized';return}catch(error){console.error('TireConnect initialization failed',error)}}if(attempt<20){setTimeout(function(){initTireConnect(attempt+1)},300);return}host.className='tc-shell tc-error';host.innerHTML='<div><b>LIVE INVENTORY DID NOT LOAD.</b><br><a class="tc-fallback" href="https://pricemytires.com/" target="_blank" rel="noopener">OPEN CURRENT INVENTORY</a></div>'}
+initTireConnect();
+
+/* ── Year / Load ── */
+$('#yearNow').textContent=new Date().getFullYear();
+addEventListener('load',()=>{setTimeout(()=>body.classList.add('loaded'),260)});
+setTimeout(()=>body.classList.add('loaded'),1400);
+
+})();
+</script>
+</body>
+</html>
