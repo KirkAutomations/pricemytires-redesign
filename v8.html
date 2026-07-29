@@ -1,5 +1,6 @@
 <!doctype html>
-<html lang="en" data-theme="porcelain">
+<html lang="en" data-theme="porcelain" data-hero="b">
+<script>try{const h=localStorage.getItem('pmt-v8-hero');if(['a','b','c','d'].includes(h))document.documentElement.dataset.hero=h}catch(e){}</script>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
@@ -102,23 +103,45 @@ main,footer{position:relative;z-index:2}
 [data-theme="motor"] .hero-photo::after,[data-theme="steel"] .hero-photo::after,[data-theme="midnight"] .hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,7,8,.98) 0%,rgba(5,7,8,.86) 39%,rgba(5,7,8,.35) 70%,rgba(5,7,8,.74) 100%),linear-gradient(0deg,#080a0b 0%,transparent 31%,rgba(0,0,0,.2) 100%)}
 /* hero-in now defined in split section above */
 .hero-copy{position:relative;z-index:3;width:100%}
-.eyebrow{margin:0 0 clamp(8px,1.5vh,18px);display:flex;align-items:center;gap:12px;text-transform:uppercase;font-size:11px;letter-spacing:.18em;font-weight:700}
+.eyebrow{margin:0 0 clamp(8px,1.5vh,18px);display:flex;align-items:center;gap:12px;text-transform:uppercase;font-size:var(--hero-eye);letter-spacing:.18em;font-weight:700}
 [data-theme="porcelain"] .eyebrow{color:#4b5563}
 [data-theme="motor"] .eyebrow,[data-theme="steel"] .eyebrow,[data-theme="midnight"] .eyebrow{color:#bcc2c4}
 .eyebrow::before{content:"";width:46px;height:3px;background:var(--accent)}
-.hero h1{margin:0;font:900 clamp(44px,5.8vw,90px)/.82 var(--head);letter-spacing:-.045em;text-transform:uppercase}
+/* Hero sizing systems (A/B/C/D) */
+:root{--hero-h1:clamp(58px,8.2vw,128px);--hero-h1-lh:.78;--hero-body:clamp(15px,1.25vw,18px);--hero-eye:12px;--hero-cta:13px;--hero-cta-pad:16px 32px;--hero-cols:1.3fr 1fr;--hero-body-margin:clamp(16px,2.2vh,28px);--hero-body-max:92%}
+html[data-hero="a"]{--hero-h1:clamp(52px,7vw,108px);--hero-h1-lh:.8;--hero-body:clamp(15px,1.2vw,17px);--hero-eye:12px;--hero-cta:12px;--hero-cta-pad:14px 28px;--hero-cols:1.2fr 1fr;--hero-body-margin:clamp(14px,2vh,24px);--hero-body-max:90%}
+html[data-hero="b"]{--hero-h1:clamp(58px,8.2vw,128px);--hero-h1-lh:.78;--hero-body:clamp(15px,1.25vw,18px);--hero-eye:12px;--hero-cta:13px;--hero-cta-pad:16px 32px;--hero-cols:1.3fr 1fr;--hero-body-margin:clamp(16px,2.2vh,28px);--hero-body-max:92%}
+html[data-hero="c"]{--hero-h1:clamp(60px,8.8vw,138px);--hero-h1-lh:.77;--hero-body:clamp(16px,1.3vw,19px);--hero-eye:13px;--hero-cta:13px;--hero-cta-pad:16px 34px;--hero-cols:1fr 1fr;--hero-body-margin:clamp(18px,2.5vh,32px);--hero-body-max:94%}
+html[data-hero="d"]{--hero-h1:clamp(64px,9.5vw,148px);--hero-h1-lh:.76;--hero-body:clamp(14px,1.1vw,16px);--hero-eye:11px;--hero-cta:12px;--hero-cta-pad:14px 26px;--hero-cols:1.4fr 1fr;--hero-body-margin:clamp(12px,1.8vh,22px);--hero-body-max:86%}
+/* Hero size selector (fixed bottom-right) */
+.hero-selector{position:fixed;right:18px;bottom:18px;z-index:1800;font-family:var(--body)}
+.hero-sel-toggle{min-width:140px;min-height:40px;padding:8px 12px;border:1px solid rgba(0,0,0,.12);border-radius:6px;background:rgba(255,255,255,.96);color:#1a1a1a;box-shadow:0 4px 16px rgba(0,0,0,.1);backdrop-filter:blur(14px);display:flex;align-items:center;justify-content:space-between;gap:10px;cursor:pointer}
+.hero-sel-label{font-size:9px;text-transform:uppercase;letter-spacing:.14em;color:#6b7280}
+.hero-sel-current{font-size:12px;font-weight:700}
+.hero-sel-toggle svg{width:14px;transition:transform .2s}
+.hero-selector.open .hero-sel-toggle svg{transform:rotate(180deg)}
+.hero-sel-panel{position:absolute;right:0;bottom:48px;width:320px;padding:14px;background:#fff;border:1px solid rgba(0,0,0,.1);border-radius:8px;box-shadow:0 12px 40px rgba(0,0,0,.12);opacity:0;visibility:hidden;transform:translateY(8px);transition:.2s ease}
+.hero-selector.open .hero-sel-panel{opacity:1;visibility:visible;transform:none}
+.hero-sel-panel strong{font-size:10px;text-transform:uppercase;letter-spacing:.14em;color:#6b7280;display:block;margin-bottom:10px}
+.hero-sel-options{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.hero-sel-opt{padding:12px 10px;text-align:left;border:1px solid rgba(0,0,0,.08);border-radius:6px;background:#f8f9fa;color:#374151;cursor:pointer;transition:border-color .15s,background .15s}
+.hero-sel-opt:hover{border-color:rgba(0,0,0,.2);background:#f0f2f5}
+.hero-sel-opt[aria-checked="true"]{border-color:#E31E24;background:#fef2f2;box-shadow:inset 0 -2px #E31E24}
+.hero-sel-opt .sel-name{display:block;font-size:12px;font-weight:700;margin-bottom:3px}
+.hero-sel-opt .sel-desc{display:block;font-size:9px;color:#6b7280;line-height:1.3}
+.hero h1{margin:0;font:900 var(--hero-h1)/var(--hero-h1-lh) var(--head);letter-spacing:-.045em;text-transform:uppercase}
 [data-theme="porcelain"] .hero h1{color:#111827}
 [data-theme="motor"] .hero h1,[data-theme="steel"] .hero h1,[data-theme="midnight"] .hero h1{color:#f4f6f5}
 .hero h1 span{display:block}
 .hero h1 .outline{color:transparent}
 [data-theme="porcelain"] .hero h1 .outline{-webkit-text-stroke:1.5px #111827}
 [data-theme="motor"] .hero h1 .outline,[data-theme="steel"] .hero h1 .outline,[data-theme="midnight"] .hero h1 .outline{-webkit-text-stroke:1.5px #f4f6f5}
-.hero-body{max-width:90%;margin:clamp(12px,1.8vh,22px) 0;font-size:clamp(14px,1.15vw,17px);line-height:1.6;font-weight:400}
+.hero-body{max-width:var(--hero-body-max);margin:var(--hero-body-margin) 0;font-size:var(--hero-body);line-height:1.6;font-weight:400}
 [data-theme="porcelain"] .hero-body{color:#374151}
 [data-theme="motor"] .hero-body,[data-theme="steel"] .hero-body,[data-theme="midnight"] .hero-body{color:#c2c7c9}
 .actions{display:flex;align-items:center;gap:24px;margin-top:clamp(4px,1vh,12px)}
 .cta{display:inline-flex;align-items:center;gap:16px;border:0;border-bottom:1px solid currentColor;padding:0 3px;min-height:50px;background:transparent;color:inherit;text-decoration:none;text-transform:uppercase;font-size:9px;font-weight:700;letter-spacing:.16em;cursor:pointer;transition:color .25s}.cta:hover{color:var(--accent)}
-.cta-primary{display:inline-flex;align-items:center;gap:12px;border:0;padding:14px 28px;background:var(--accent);color:#fff;text-decoration:none;text-transform:uppercase;font:700 11px/1 var(--body);letter-spacing:.12em;cursor:pointer;transition:background .25s,transform .15s}.cta-primary:hover{background:#c41a1f;transform:translateY(-1px)}.cta-primary svg{width:16px;height:16px}
+.cta-primary{display:inline-flex;align-items:center;gap:12px;border:0;padding:var(--hero-cta-pad);background:var(--accent);color:#fff;text-decoration:none;text-transform:uppercase;font:700 var(--hero-cta)/1 var(--body);letter-spacing:.12em;cursor:pointer;transition:background .25s,transform .15s}.cta-primary:hover{background:#c41a1f;transform:translateY(-1px)}.cta-primary svg{width:16px;height:16px}
 .cta-dot{width:42px;height:42px;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center}.cta-dot svg{width:18px}
 .micro-link{font-size:11px;text-transform:uppercase;letter-spacing:.12em;font-weight:600}
 [data-theme="porcelain"] .micro-link{color:#4b5563}
@@ -137,7 +160,7 @@ main,footer{position:relative;z-index:2}
 
 
 /* ── Hero split: left copy + right TireConnect ── */
-.hero-in{width:min(1440px,calc(100% - 48px));min-height:calc(100vh - 10px);margin:auto;padding:calc(var(--nav) + 12px) 0 12px;position:relative;display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(20px,3vw,44px);align-items:start;align-content:start}
+.hero-in{width:min(1440px,calc(100% - 48px));min-height:calc(100vh - 10px);margin:auto;padding:calc(var(--nav) + 12px) 0 12px;position:relative;display:grid;grid-template-columns:var(--hero-cols);gap:clamp(20px,3vw,44px);align-items:start;align-content:start}
 .hero-tc{position:relative;z-index:3;background:rgba(255,255,255,.95);border-radius:8px;padding:12px;box-shadow:0 8px 32px rgba(0,0,0,.08);border:1px solid rgba(0,0,0,.06);max-height:calc(100vh - var(--nav) - 36px);overflow-y:auto;overflow-x:hidden;scrollbar-width:thin}
 .hero-tc-head{font:700 11px/1 var(--body);text-transform:uppercase;letter-spacing:.08em;color:#E31E24;margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid rgba(0,0,0,.06)}
 .hero-tc .tc-shell{min-height:200px}
@@ -569,6 +592,18 @@ Request Quote
 </div>
 </footer>
 
+<aside class="hero-selector" aria-label="Hero size selector">
+<button class="hero-sel-toggle" type="button" aria-expanded="false"><span class="hero-sel-label">Hero Size</span><span class="hero-sel-current">B &mdash; Display</span><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button>
+<div class="hero-sel-panel">
+<strong>Choose hero size</strong>
+<div class="hero-sel-options" role="radiogroup">
+<button class="hero-sel-opt" data-hero="a" role="radio" aria-checked="false" type="button"><span class="sel-name">A &mdash; Clean</span><span class="sel-desc">108px max, balanced</span></button>
+<button class="hero-sel-opt" data-hero="b" role="radio" aria-checked="true" type="button"><span class="sel-name">B &mdash; Display</span><span class="sel-desc">128px max, bold</span></button>
+<button class="hero-sel-opt" data-hero="c" role="radio" aria-checked="false" type="button"><span class="sel-name">C &mdash; Modern</span><span class="sel-desc">138px max, centered</span></button>
+<button class="hero-sel-opt" data-hero="d" role="radio" aria-checked="false" type="button"><span class="sel-name">D &mdash; Dominant</span><span class="sel-desc">148px max, headline-heavy</span></button>
+</div>
+</div>
+</aside>
 <script src="https://app.tireconnect.ca/js/widget.js"></script>
 <script>
 (()=>{"use strict";
@@ -650,6 +685,15 @@ $('#quoteForm').addEventListener('submit',e=>{e.preventDefault();const size=clea
 /* ── TireConnect initialization ── */
 function initTireConnect(attempt){attempt=attempt||0;const host=$('#tireconnect_v8');if(!host)return;if(window.TCWidget){try{host.innerHTML='';window.TCWidget.init({apikey:'ad3fd73542378c28f465e66de6638485',container:'tireconnect_v8'});host.dataset.status='initialized';return}catch(error){console.error('TireConnect initialization failed',error)}}if(attempt<20){setTimeout(function(){initTireConnect(attempt+1)},300);return}host.className='tc-shell tc-error';host.innerHTML='<div><b>LIVE INVENTORY DID NOT LOAD.</b><br><a class="tc-fallback" href="https://pricemytires.com/" target="_blank" rel="noopener">OPEN CURRENT INVENTORY</a></div>'}
 initTireConnect();
+
+/* Hero size selector */
+var heroNames={a:'A \u2014 Clean',b:'B \u2014 Display',c:'C \u2014 Modern',d:'D \u2014 Dominant'};
+var heroSelector=$('.hero-selector'),heroToggle=$('.hero-sel-toggle'),heroOpts=$$('.hero-sel-opt');
+function applyHero(h){if(!['a','b','c','d'].includes(h))h='b';root.dataset.hero=h;try{localStorage.setItem('pmt-v8-hero',h)}catch(e){}heroOpts.forEach(function(o){o.setAttribute('aria-checked',String(o.dataset.hero===h))});$('.hero-sel-current').textContent=heroNames[h]}
+applyHero(root.dataset.hero||'b');
+if(heroToggle)heroToggle.addEventListener('click',function(){var open=heroSelector.classList.toggle('open');heroToggle.setAttribute('aria-expanded',String(open))});
+heroOpts.forEach(function(o){o.addEventListener('click',function(){applyHero(o.dataset.hero);heroSelector.classList.remove('open');heroToggle.setAttribute('aria-expanded','false');heroToggle.focus()})});
+d.addEventListener('click',function(e){if(heroSelector&&heroSelector.classList.contains('open')&&!heroSelector.contains(e.target)){heroSelector.classList.remove('open');heroToggle.setAttribute('aria-expanded','false')}});
 
 /* ── Year / Load ── */
 $('#yearNow').textContent=new Date().getFullYear();
