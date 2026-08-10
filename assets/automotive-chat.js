@@ -61,7 +61,8 @@
   const launch = root.querySelector(".kac-launch");
   const dismiss = root.querySelector(".kac-dismiss");
   const storageKey = `kirk-chat-${config.tenant}`;
-  const sessionId = sessionStorage.getItem(`${storageKey}-session`) || crypto.randomUUID();
+  const newSessionId = () => globalThis.crypto?.randomUUID?.() || `kac-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 12)}`;
+  const sessionId = sessionStorage.getItem(`${storageKey}-session`) || newSessionId();
   sessionStorage.setItem(`${storageKey}-session`, sessionId);
   let messages = [];
   let busy = false;
