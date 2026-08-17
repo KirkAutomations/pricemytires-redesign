@@ -1,14 +1,13 @@
 <!doctype html>
-<html lang="en" data-theme="porcelain" data-hero="b">
-<script>try{const h=localStorage.getItem('pmt-v8-hero');if(['a','b','c','d'].includes(h))document.documentElement.dataset.hero=h}catch(e){}</script>
+<html lang="en" data-theme="porcelain">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Price My Tires V8 | Find Tires &amp; Get Your Out-the-Door Price</title>
-<meta name="description" content="Search tires, request a written out-the-door quote by text from MJ Express in Redford, Michigan. Tires, oil changes, brakes, and more.">
+<meta name="description" content="Search live tire inventory at MJ Express in Redford, Michigan. Find tires by vehicle or size, then call the shop for help and pricing.">
 <meta name="theme-color" content="#E31E24">
 <link rel="canonical" href="https://pricemytires.com/">
-<meta property="og:type" content="website"><meta property="og:title" content="Price My Tires | Find Tires. Get the Price."><meta property="og:description" content="Search live inventory and get a written out-the-door tire quote by text."><meta property="og:url" content="https://pricemytires.com/">
+<meta property="og:type" content="website"><meta property="og:title" content="Price My Tires | Find Tires. Get the Price."><meta property="og:description" content="Search live inventory by vehicle or tire size, then call MJ Express for help and pricing."><meta property="og:url" content="https://pricemytires.com/">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700;800;900&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"AutomotiveBusiness","name":"Price My Tires","url":"https://pricemytires.com/","description":"Tire search, written out-the-door quotes, and full auto service in Redford, Michigan.","openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"08:00","closes":"15:00"}],"department":[{"@type":"AutoPartsStore","name":"MJ Express - Redford","telephone":"+1-313-300-8403","address":{"@type":"PostalAddress","streetAddress":"15150 Telegraph Rd","addressLocality":"Redford","addressRegion":"MI","addressCountry":"US"}}]}</script>
@@ -94,7 +93,7 @@ main,footer{position:relative;z-index:2}
 .section-label{margin:0 0 18px;color:var(--accent);font-size:9px;text-transform:uppercase;letter-spacing:.2em}
 
 /* ── Hero (compact) ── */
-.hero{min-height:100vh;position:relative;overflow:hidden}
+.hero{position:relative;overflow:hidden}
 [data-theme="porcelain"] .hero{background:#fff}
 [data-theme="motor"] .hero,[data-theme="steel"] .hero,[data-theme="midnight"] .hero{background:#080a0b}
 .hero-photo{position:absolute;inset:0}
@@ -107,28 +106,8 @@ main,footer{position:relative;z-index:2}
 [data-theme="porcelain"] .eyebrow{color:#4b5563}
 [data-theme="motor"] .eyebrow,[data-theme="steel"] .eyebrow,[data-theme="midnight"] .eyebrow{color:#bcc2c4}
 .eyebrow::before{content:"";width:46px;height:3px;background:var(--accent)}
-/* Hero sizing systems (A/B/C/D) */
+/* Production hero sizing */
 :root{--hero-h1:clamp(58px,8.2vw,128px);--hero-h1-lh:.78;--hero-body:clamp(15px,1.25vw,18px);--hero-eye:12px;--hero-cta:13px;--hero-cta-pad:16px 32px;--hero-cols:1.3fr 1fr;--hero-body-margin:clamp(16px,2.2vh,28px);--hero-body-max:92%}
-html[data-hero="a"]{--hero-h1:clamp(52px,7vw,108px);--hero-h1-lh:.8;--hero-body:clamp(15px,1.2vw,17px);--hero-eye:12px;--hero-cta:12px;--hero-cta-pad:14px 28px;--hero-cols:1.2fr 1fr;--hero-body-margin:clamp(14px,2vh,24px);--hero-body-max:90%}
-html[data-hero="b"]{--hero-h1:clamp(58px,8.2vw,128px);--hero-h1-lh:.78;--hero-body:clamp(15px,1.25vw,18px);--hero-eye:12px;--hero-cta:13px;--hero-cta-pad:16px 32px;--hero-cols:1.3fr 1fr;--hero-body-margin:clamp(16px,2.2vh,28px);--hero-body-max:92%}
-html[data-hero="c"]{--hero-h1:clamp(60px,8.8vw,138px);--hero-h1-lh:.77;--hero-body:clamp(16px,1.3vw,19px);--hero-eye:13px;--hero-cta:13px;--hero-cta-pad:16px 34px;--hero-cols:1fr 1fr;--hero-body-margin:clamp(18px,2.5vh,32px);--hero-body-max:94%}
-html[data-hero="d"]{--hero-h1:clamp(64px,9.5vw,148px);--hero-h1-lh:.76;--hero-body:clamp(14px,1.1vw,16px);--hero-eye:11px;--hero-cta:12px;--hero-cta-pad:14px 26px;--hero-cols:1.4fr 1fr;--hero-body-margin:clamp(12px,1.8vh,22px);--hero-body-max:86%}
-/* Hero size selector (fixed bottom-right) */
-.hero-selector{position:fixed;right:18px;bottom:18px;z-index:1800;font-family:var(--body)}
-.hero-sel-toggle{min-width:140px;min-height:40px;padding:8px 12px;border:1px solid rgba(0,0,0,.12);border-radius:6px;background:rgba(255,255,255,.96);color:#1a1a1a;box-shadow:0 4px 16px rgba(0,0,0,.1);backdrop-filter:blur(14px);display:flex;align-items:center;justify-content:space-between;gap:10px;cursor:pointer}
-.hero-sel-label{font-size:9px;text-transform:uppercase;letter-spacing:.14em;color:#6b7280}
-.hero-sel-current{font-size:12px;font-weight:700}
-.hero-sel-toggle svg{width:14px;transition:transform .2s}
-.hero-selector.open .hero-sel-toggle svg{transform:rotate(180deg)}
-.hero-sel-panel{position:absolute;right:0;bottom:48px;width:320px;padding:14px;background:#fff;border:1px solid rgba(0,0,0,.1);border-radius:8px;box-shadow:0 12px 40px rgba(0,0,0,.12);opacity:0;visibility:hidden;transform:translateY(8px);transition:.2s ease}
-.hero-selector.open .hero-sel-panel{opacity:1;visibility:visible;transform:none}
-.hero-sel-panel strong{font-size:10px;text-transform:uppercase;letter-spacing:.14em;color:#6b7280;display:block;margin-bottom:10px}
-.hero-sel-options{display:grid;grid-template-columns:1fr 1fr;gap:6px}
-.hero-sel-opt{padding:12px 10px;text-align:left;border:1px solid rgba(0,0,0,.08);border-radius:6px;background:#f8f9fa;color:#374151;cursor:pointer;transition:border-color .15s,background .15s}
-.hero-sel-opt:hover{border-color:rgba(0,0,0,.2);background:#f0f2f5}
-.hero-sel-opt[aria-checked="true"]{border-color:#E31E24;background:#fef2f2;box-shadow:inset 0 -2px #E31E24}
-.hero-sel-opt .sel-name{display:block;font-size:12px;font-weight:700;margin-bottom:3px}
-.hero-sel-opt .sel-desc{display:block;font-size:9px;color:#6b7280;line-height:1.3}
 .hero h1{margin:0;font:900 var(--hero-h1)/var(--hero-h1-lh) var(--head);letter-spacing:-.045em;text-transform:uppercase}
 [data-theme="porcelain"] .hero h1{color:#111827}
 [data-theme="motor"] .hero h1,[data-theme="steel"] .hero h1,[data-theme="midnight"] .hero h1{color:#f4f6f5}
@@ -160,7 +139,7 @@ html[data-hero="d"]{--hero-h1:clamp(64px,9.5vw,148px);--hero-h1-lh:.76;--hero-bo
 
 
 /* ── Hero split: left copy + right TireConnect ── */
-.hero-in{width:min(1440px,calc(100% - 48px));min-height:calc(100vh - 10px);margin:auto;padding:calc(var(--nav) + 12px) 0 12px;position:relative;display:grid;grid-template-columns:var(--hero-cols);gap:clamp(20px,3vw,44px);align-items:start;align-content:start}
+.hero-in{width:min(1440px,calc(100% - 48px));margin:auto;padding:calc(var(--nav) + 12px) 0 clamp(28px,4vw,56px);position:relative;display:grid;grid-template-columns:var(--hero-cols);gap:clamp(20px,3vw,44px);align-items:start;align-content:start}
 .hero-tc{position:relative;z-index:3;background:rgba(255,255,255,.95);border-radius:8px;padding:12px;box-shadow:0 8px 32px rgba(0,0,0,.08);border:1px solid rgba(0,0,0,.06);max-height:calc(100vh - var(--nav) - 36px);overflow-y:auto;overflow-x:hidden;scrollbar-width:thin}
 .hero-tc-head{font:700 11px/1 var(--body);text-transform:uppercase;letter-spacing:.08em;color:#E31E24;margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid rgba(0,0,0,.06)}
 .hero-tc .tc-shell{min-height:200px}
@@ -349,7 +328,7 @@ section{scroll-margin-top:70px}
 <a class="brand" href="#top" aria-label="Price My Tires home">PRICE MY <span>TIRES</span></a>
 <nav class="nav" aria-label="Primary">
 <a href="#tireconnect_v8">Find Tires</a>
-<a href="#quote">Get a Quote</a>
+<a href="tel:+13133008403">Call Shop</a>
 <a href="#services">Services</a>
 <a href="#locations">Location</a>
 </nav>
@@ -368,7 +347,7 @@ section{scroll-margin-top:70px}
 <!-- ── MOBILE MENU ── -->
 <nav class="mobile-menu" id="mobileMenu" aria-hidden="true">
 <a href="#tireconnect_v8">Find Tires</a>
-<a href="#quote">Get a Quote</a>
+<a href="tel:+13133008403">Call Shop</a>
 <a href="#services">Services</a>
 <a href="#locations">Location</a>
 </nav>
@@ -420,7 +399,7 @@ section{scroll-margin-top:70px}
 <span data-copy="heroCta">Search Tires Now</span>
 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
 </a>
-<a class="micro-link" href="#quote">Or request a quote</a>
+<a class="micro-link" href="tel:+13133008403">Or call the shop</a>
 </div>
 </div>
 <div class="hero-tc">
@@ -437,65 +416,6 @@ section{scroll-margin-top:70px}
 
 <!-- ══════════════════════════════════════════════ -->
 <!-- ── QUOTE REQUEST ── -->
-<!-- ══════════════════════════════════════════════ -->
-<section class="quote" id="quote">
-<div class="wrap">
-<div class="quote-head reveal">
-<div>
-<p class="section-label">Request a Quote</p>
-<h2 data-copy="quoteTitle">Send the size.<br>Pick the counter.</h2>
-</div>
-<p data-copy="quoteBody">Five checkpoints. One clean text. The selected shop replies with price, availability, and what the number includes.</p>
-</div>
-<form class="pit-form reveal" id="quoteForm" novalidate>
-<div class="route-line" aria-hidden="true"></div>
-<div class="flow">
-<div class="checkpoint">
-<div class="check-head"><i></i><b>Size</b></div>
-<label class="sr-only" for="tireSize">Tire size</label>
-<input class="line-input" id="tireSize" name="tireSize" maxlength="20" autocomplete="off" placeholder="225/60R16" required>
-</div>
-<div class="checkpoint">
-<div class="check-head"><i></i><b>Vehicle</b></div>
-<label class="sr-only" for="year">Vehicle year</label>
-<input class="line-input" id="year" name="year" inputmode="numeric" maxlength="4" autocomplete="off" placeholder="2016" required>
-</div>
-<div class="checkpoint">
-<div class="check-head"><i></i><b>Vehicle</b></div>
-<label class="sr-only" for="vehicle">Make and model</label>
-<input class="line-input" id="vehicle" name="vehicle" maxlength="60" autocomplete="off" placeholder="Chevrolet Malibu" required>
-</div>
-<div class="checkpoint">
-<div class="check-head"><i></i><b>Preference</b></div>
-<div class="choice-row">
-<span class="choice"><input type="radio" id="prefNew" name="preference" value="New" checked><label for="prefNew">New</label></span>
-<span class="choice"><input type="radio" id="prefUsed" name="preference" value="Used"><label for="prefUsed">Used</label></span>
-<span class="choice"><input type="radio" id="prefBoth" name="preference" value="New or used"><label for="prefBoth">Both</label></span>
-</div>
-<input type="hidden" name="location" value="redford">
-</div>
-<div class="checkpoint send-check">
-<div class="check-head"><i></i><b>Text</b></div>
-<button class="cta flow-submit magnetic" type="submit">
-<span data-copy="formCta">Build the text</span>
-<span class="cta-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/></svg></span>
-</button>
-</div>
-</div>
-<div class="form-error" id="formError" role="alert" aria-live="polite"></div>
-<p class="flow-note">Nothing is stored or sent by this page. Review the prepared draft in your messaging app before sending.</p>
-</form>
-<div class="telemetry" id="telemetry" aria-live="polite">
-<span>Request <strong id="rId">PMT-PENDING</strong></span>
-<span class="state">State / <b>READY FOR SHOP REPLY</b></span>
-<span class="honor">Eventual shop phrase: This number is honored at the counter.</span>
-<a class="sms" id="smsButton" href="#quote">OPEN TEXT</a>
-</div>
-</div>
-</section>
-
-<!-- ══════════════════════════════════════════════ -->
-<!-- ── SERVICES ── -->
 <!-- ══════════════════════════════════════════════ -->
 <section class="services" id="services">
 <div class="wrap">
@@ -559,9 +479,9 @@ section{scroll-margin-top:70px}
 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
 Get Directions
 </a>
-<a class="loc-link" href="#quote">
+<a class="loc-link" href="#tireconnect_v8">
 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/></svg>
-Request Quote
+Find Tires
 </a>
 </div>
 </article>
@@ -582,7 +502,7 @@ Request Quote
 <div class="foot-brand">Price My Tires / <span>The Number</span></div>
 <div class="foot-links">
 <a href="#tireconnect_v8">Find Tires</a>
-<a href="#quote">Quote</a>
+<a href="tel:+13133008403">Call</a>
 <a href="#locations">Location</a>
 </div>
 <div class="legal">
@@ -592,18 +512,6 @@ Request Quote
 </div>
 </footer>
 
-<aside class="hero-selector" aria-label="Hero size selector">
-<button class="hero-sel-toggle" type="button" aria-expanded="false"><span class="hero-sel-label">Hero Size</span><span class="hero-sel-current">B &mdash; Display</span><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button>
-<div class="hero-sel-panel">
-<strong>Choose hero size</strong>
-<div class="hero-sel-options" role="radiogroup">
-<button class="hero-sel-opt" data-hero="a" role="radio" aria-checked="false" type="button"><span class="sel-name">A &mdash; Clean</span><span class="sel-desc">108px max, balanced</span></button>
-<button class="hero-sel-opt" data-hero="b" role="radio" aria-checked="true" type="button"><span class="sel-name">B &mdash; Display</span><span class="sel-desc">128px max, bold</span></button>
-<button class="hero-sel-opt" data-hero="c" role="radio" aria-checked="false" type="button"><span class="sel-name">C &mdash; Modern</span><span class="sel-desc">138px max, centered</span></button>
-<button class="hero-sel-opt" data-hero="d" role="radio" aria-checked="false" type="button"><span class="sel-name">D &mdash; Dominant</span><span class="sel-desc">148px max, headline-heavy</span></button>
-</div>
-</div>
-</aside>
 <script src="https://app.tireconnect.ca/js/widget.js"></script>
 <script>
 (()=>{"use strict";
@@ -677,23 +585,9 @@ addEventListener('scroll',scrollState,{passive:true});scrollState();
 if(matchMedia('(pointer:fine)').matches){body.classList.add('fine-pointer');addEventListener('pointermove',e=>{if(!motion)return;$('#cursorGlow').style.left=e.clientX+'px';$('#cursorGlow').style.top=e.clientY+'px'},{passive:true});$$('.magnetic').forEach(b=>{b.addEventListener('pointermove',e=>{if(!motion)return;const r=b.getBoundingClientRect();b.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.06}px,${(e.clientY-r.top-r.height/2)*.08}px)`});b.addEventListener('pointerleave',()=>b.style.transform='')})}
 
 /* ── Quote form ── */
-const locs={redford:{name:'Redford / Telegraph',phone:'3133008403'}};
-function clean(v){return v.trim().replace(/[<>\r\n]/g,' ').replace(/\s+/g,' ')}
-function requestId(){const a=new Uint16Array(2);if(window.crypto&&crypto.getRandomValues)crypto.getRandomValues(a);else{a[0]=Math.random()*65535;a[1]=Date.now()%65535}return'PMT-'+String((a[0]^a[1])%9000+1000)}
-$('#quoteForm').addEventListener('submit',e=>{e.preventDefault();const size=clean($('#tireSize').value),year=clean($('#year').value),vehicle=clean($('#vehicle').value),error=$('#formError');if(!size||!/^(19|20)\d{2}$/.test(year)||!vehicle){error.textContent='CHECK SIZE, FOUR-DIGIT YEAR, AND MAKE / MODEL.';return}error.textContent='';const pref=$('input[name="preference"]:checked').value,key=$('input[name="location"]:checked').value,loc=locs[key],id=requestId(),message=`Price My Tires request ${id}\nTire size: ${size}\nVehicle: ${year} ${vehicle}\nPreference: ${pref}\nShop: ${loc.name}\nPlease reply with a written, itemized out-the-door quote, availability, included services, and validity.`,sms='sms:'+loc.phone+'?body='+encodeURIComponent(message);$('#rId').textContent=id;$('#smsButton').href=sms;$('#telemetry').classList.add('ready');$('#telemetry').scrollIntoView({behavior:motion?'smooth':'auto',block:'nearest'})});
-
-/* ── TireConnect initialization ── */
-function initTireConnect(attempt){attempt=attempt||0;const host=$('#tireconnect_v8');if(!host)return;if(window.TCWidget){try{host.innerHTML='';window.TCWidget.init({apikey:'ad3fd73542378c28f465e66de6638485',container:'tireconnect_v8'});host.dataset.status='initialized';return}catch(error){console.error('TireConnect initialization failed',error)}}if(attempt<20){setTimeout(function(){initTireConnect(attempt+1)},300);return}host.className='tc-shell tc-error';host.innerHTML='<div><b>LIVE INVENTORY DID NOT LOAD.</b><br><a class="tc-fallback" href="https://pricemytires.com/" target="_blank" rel="noopener">OPEN CURRENT INVENTORY</a></div>'}
+/* TireConnect initialization */
+function initTireConnect(attempt){attempt=attempt||0;const host=$('#tireconnect_v8');if(!host)return;if(window.TCWidget){try{host.innerHTML='';window.TCWidget.init({apikey:'ad3fd73542378c28f465e66de6638485',container:'tireconnect_v8'});host.dataset.status='initialized';return}catch(error){console.error('TireConnect initialization failed',error)}}if(attempt<20){setTimeout(function(){initTireConnect(attempt+1)},300);return}host.className='tc-shell tc-error';host.innerHTML='<div><b>LIVE INVENTORY DID NOT LOAD.</b><br><a class="tc-fallback" href="tel:+13133008403">CALL THE SHOP: 313-300-8403</a></div>'}
 initTireConnect();
-
-/* Hero size selector */
-var heroNames={a:'A \u2014 Clean',b:'B \u2014 Display',c:'C \u2014 Modern',d:'D \u2014 Dominant'};
-var heroSelector=$('.hero-selector'),heroToggle=$('.hero-sel-toggle'),heroOpts=$$('.hero-sel-opt');
-function applyHero(h){if(!['a','b','c','d'].includes(h))h='b';root.dataset.hero=h;try{localStorage.setItem('pmt-v8-hero',h)}catch(e){}heroOpts.forEach(function(o){o.setAttribute('aria-checked',String(o.dataset.hero===h))});$('.hero-sel-current').textContent=heroNames[h]}
-applyHero(root.dataset.hero||'b');
-if(heroToggle)heroToggle.addEventListener('click',function(){var open=heroSelector.classList.toggle('open');heroToggle.setAttribute('aria-expanded',String(open))});
-heroOpts.forEach(function(o){o.addEventListener('click',function(){applyHero(o.dataset.hero);heroSelector.classList.remove('open');heroToggle.setAttribute('aria-expanded','false');heroToggle.focus()})});
-d.addEventListener('click',function(e){if(heroSelector&&heroSelector.classList.contains('open')&&!heroSelector.contains(e.target)){heroSelector.classList.remove('open');heroToggle.setAttribute('aria-expanded','false')}});
 
 /* ── Year / Load ── */
 $('#yearNow').textContent=new Date().getFullYear();
