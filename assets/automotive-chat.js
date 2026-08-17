@@ -33,7 +33,7 @@
     .kac-prompts{display:flex;gap:7px;flex-wrap:wrap;margin:2px 0 15px}.kac-prompt{border:1px solid color-mix(in srgb,var(--kac-accent) 40%,#cdd3da);border-radius:999px;background:#fff;color:#303741;padding:7px 10px;font:650 11px/1.2 inherit}.kac-prompt:hover{border-color:var(--kac-accent);color:var(--kac-accent)}
     .kac-actions{display:flex;gap:8px;flex-wrap:wrap;margin:2px 0 14px}.kac-action{display:inline-flex;align-items:center;justify-content:center;min-height:34px;padding:7px 10px;border:1px solid #d4dae1;border-radius:8px;color:#252b33!important;background:#fff;font-size:11px;font-weight:750;text-decoration:none!important}.kac-action:first-child{background:#111827;color:#fff!important;border-color:#111827}
     .kac-foot{padding:12px 14px 10px;border-top:1px solid #e2e6eb;background:#fff}.kac-form{display:grid;grid-template-columns:1fr 44px;gap:8px;align-items:end}.kac-input{width:100%;max-height:110px;resize:none;border:1px solid #cbd2da;border-radius:10px;padding:11px 12px;background:#fff;color:#16191d;font:14px/1.35 inherit;outline:0}.kac-input:focus{border-color:var(--kac-accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--kac-accent) 16%,transparent)}.kac-send{width:44px;height:44px;border:0;border-radius:10px;background:var(--kac-accent);color:#fff;display:grid;place-items:center}.kac-send:disabled{opacity:.45}.kac-send svg{width:18px}.kac-disclaimer{margin-top:7px;color:#727d89;font-size:9.5px;line-height:1.35;text-align:center}
-    @media(max-width:600px){.kac-root{left:10px;bottom:10px}.kac-panel{position:fixed;inset:8px;width:auto;height:auto;max-height:none;border-radius:14px;transform:translateY(14px)}.kac-launch{width:54px;height:54px}.kac-log{padding:15px}.kac-message{max-width:92%}}
+    @media(max-width:600px){.kac-root{left:10px;bottom:10px;transition:opacity .2s ease,transform .2s ease}.kac-root.kac-hero-hidden:not(.kac-open){opacity:0;pointer-events:none;transform:translateY(12px)}.kac-panel{position:fixed;inset:8px;width:auto;height:auto;max-height:none;border-radius:14px;transform:translateY(14px)}.kac-launch{width:54px;height:54px}.kac-log{padding:15px}.kac-message{max-width:92%}}
     @media(prefers-reduced-motion:reduce){.kac-panel,.kac-launch,.kac-typing i{transition:none;animation:none}}
   `;
 
@@ -171,6 +171,12 @@
 
   document.head.append(style);
   document.body.append(root);
+  const hero = document.querySelector(".hero");
+  if (hero && "IntersectionObserver" in window) {
+    new IntersectionObserver(entries => {
+      root.classList.toggle("kac-hero-hidden", entries[0]?.isIntersecting);
+    }, { threshold: 0.02 }).observe(hero);
+  }
   addMessage("assistant", config.greeting);
   addPrompts();
 })();
